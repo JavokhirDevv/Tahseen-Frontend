@@ -1,0 +1,19 @@
+.topbooks{
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 30px;
+    border: 1px solid black;
+
+
+}
+.topbooks h1{
+    text-align: center;
+    margin: 10px 0px;
+    color: #0293FC;
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
