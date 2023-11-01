@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Header.css"
-import logoTahseen from '../../assets/imgs/header/logo.JPG'; // Use '.JPG' for the file extension
+import logoTahseen from '../../../assets/imgs/header/logo.JPG'; // Use '.JPG' for the file extension
 const Header = () => {
   return (
     <div className='header'>

@@ -1,0 +1,45 @@
+.tahseen_service{
+    max-width: 1440px;
+    width: 100%;
+    background-color: #F5F7FA;
+    border-radius: 30px;
+    margin: 10px auto;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.service_card{
+    max-width: 300px;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.3s;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+.service_card:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    scale: 1.03;
+}
+.service_card .service_card_icon{
+    max-width: 120px;
+    width: 100%;
+    font-size: 40px;
+    color: #0293FC;
+}
+.service_card .service_card_text p{
+    font-size: 14px;
+    max-width: 200px;
+    width: 100%;
+}

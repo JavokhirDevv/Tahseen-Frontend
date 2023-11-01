@@ -1,0 +1,27 @@
+.top_library{
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 30px;
+    /* border: 1px solid black; */
+
+
+}
+.top_library h1{
+    text-align: center;
+    margin: 10px 0px;
+    color: #0293FC;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.top_library_slider{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}

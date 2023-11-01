@@ -1,0 +1,98 @@
+/* User Card Container */
+.library_card {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: box-shadow 0.3s ease;
+    background-color: #ffffff;
+    filter: opacity(0.8);
+    margin: 10px;
+}
+
+/* User Image Container */
+.library_card_image_cover {
+    max-width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.library_card_image_cover img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* User Info */
+.library_card h3 {
+    text-align: center;
+    margin: 5px 0;
+    color: #333333;
+}
+.library_card p{
+    text-indent: 5px;
+}
+.library_card p .fa-star{
+    margin-left: -2px;
+}
+.library_card p i {
+    color: #0293FC;
+    margin-right: 5px;
+}
+
+.library_card p font {
+    font-weight: 500;
+    color: #333333;
+}
+
+/* Hover Effect */
+.library_card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    filter: opacity(1);
+}
+
+
+.library_card button{
+    max-width: 250px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #0293FC;
+    text-align: center;
+    color: #0293FC;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 0.2s;
+    font-family: 'Poppins', sans-serif;
+
+}
+.library_card button:active{
+    max-width: 250px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #0293FC;
+    text-align: center;
+    color: #0293FC;
+    border-radius: 10px;
+    margin-top: 10px;
+    scale: 1.05;
+}
+.library_card button:hover{
+    background-color: #0293FC;
+    color: white;
+}
+
+.library_card_button{
+    text-align: center;
+}
