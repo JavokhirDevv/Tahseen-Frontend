@@ -1,7 +1,7 @@
 .bookcard {
     max-width: 330px;
     width: 100%;
-    height: 470px;
+    height: 56gigg0px;
     border: 1px solid #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -20,10 +20,9 @@
 }
 
 .bookcard .book_image_cover {
-    max-width: 100%;
+    max-width: 330px;
     width: 100%;
     height: 300px;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +30,6 @@
     border-radius: 5px;
     margin: auto;
     margin-bottom: 15px;
-    position: relative;
 }
 
 .bookcard .book_image_cover img{
