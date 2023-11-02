@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination} from 'swiper/modules';
 import './Banner.css'
-import library from '../../../assets/imgs/banner/library.jpg'
+import library from '../../../assets/imgs/banner/library.png'
 const Banner = () => {
   return (
     <div className='banner'>
