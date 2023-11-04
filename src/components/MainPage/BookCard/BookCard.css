@@ -1,7 +1,7 @@
 .bookcard {
-    max-width: 330px;
+    max-width: 320px;
     width: 100%;
-    height: 56gigg0px;
+    height: 470px;
     border: 1px solid #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@
     background-color: #ffffff;
     border-radius: 12px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .bookcard:hover {
@@ -22,20 +23,22 @@
 .bookcard .book_image_cover {
     max-width: 330px;
     width: 100%;
-    height: 300px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #e0e0e0;
     border-radius: 5px;
-    margin: auto;
-    margin-bottom: 15px;
+    margin: 0px auto;
+    overflow: hidden;
 }
 
 .bookcard .book_image_cover img{
-    height: 300px;
+    height: 220px;
     border-radius: 5px;
-    /* border: 1px solid black; */
+}
+.bookcard:hover .book_image_cover img{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .bookcard .book_card_icons .fa-heart{
@@ -64,7 +67,7 @@
     font-weight: 400;
     color: #555;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-family: 'Poppins', sans-serif;
 }
 .bookcard h3 font {
@@ -84,7 +87,13 @@
     text-align: left;
     color: #0293FC;
 }
-
+.bookcard_button{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 1px solid black; */
+}
 .bookcard button{
     max-width: 150px;
     width: 100%;
@@ -95,7 +104,6 @@
     text-align: center;
     color: #0293FC;
     border-radius: 10px;
-    margin-top: 10px;
     transition: all 0.2s;
     font-family: 'Poppins', sans-serif;
 
@@ -111,7 +119,7 @@
     color: #0293FC;
     border-radius: 10px;
     margin-top: 10px;
-    scale: 1.05;
+    scale: 1.03;
 }
 .bookcard button:hover{
     background-color: #0293FC;

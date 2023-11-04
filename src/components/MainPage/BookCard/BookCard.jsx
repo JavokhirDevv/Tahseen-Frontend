@@ -10,7 +10,8 @@ const BookCard = () => {
         <h4>Diqqat</h4>
         <h3><font>Muallif:</font> Kell Nyuport</h3>
         <h3><font>Kutubxona Manzili:</font> Alisher Navoiy</h3>
-        <h3><font>Kitob turi:</font> Qattiq Muqova</h3>
+        <h3><font>Janr:</font> Badiiy</h3>
+        <h3><font>Mavjud nusxalar:</font> 50</h3>
         <div className="book_card_icons">
         <span>
             <i class="fa-solid fa-star"></i>    

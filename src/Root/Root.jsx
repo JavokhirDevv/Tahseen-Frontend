@@ -8,6 +8,7 @@ import About from '../components/MainPage/About/About'
 import TahseenService from '../components/MainPage/TahseenServices/TahseenService'
 import TopLibrary from '../components/MainPage/TopLibraries/TopLibrary'
 import Footer from '../components/MainPage/Footer/Footer'
+import BooksCover from '../components/Books/BooksCover/BooksCover'
 import { Route, Routes } from 'react-router-dom'
 
 const Root = () => {
@@ -25,9 +26,14 @@ const Root = () => {
             <TopLibrary/>
             <About/>
           </>
-      }/>
+        }/>
 
-     </Routes>
+        <Route path='/kitoblar' element={
+          <>
+            <BooksCover /> 
+          </>
+        }/>
+       </Routes>
       <Footer/>
     </>
   )
