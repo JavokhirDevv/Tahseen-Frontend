@@ -41,7 +41,7 @@
     transition: box-shadow 0.3s ease-in-out;
 }
 
-.bookcard .book_card_icons .fa-heart{
+.bookcard .book_card_icons .fa-bookmark{
     color: #C2C6D1;
     max-width: 45px;
     width: 100%;

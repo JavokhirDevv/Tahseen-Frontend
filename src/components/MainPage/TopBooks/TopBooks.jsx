@@ -31,7 +31,6 @@ const TopBooks = () => {
                 <SwiperSlide><BookCard/></SwiperSlide>
                 <SwiperSlide><BookCard/></SwiperSlide>
                 <SwiperSlide><BookCard/></SwiperSlide>
-                <SwiperSlide><BookCard/></SwiperSlide>
         </Swiper>
         </div>
     </div>

@@ -32,7 +32,7 @@
 }
 
 .book_sorting_filter_cover::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
+    width: 6px; /* Set the width of the scrollbar */
 }
   
   /* Track */

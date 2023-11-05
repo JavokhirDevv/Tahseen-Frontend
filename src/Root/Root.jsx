@@ -10,6 +10,7 @@ import TopLibrary from '../components/MainPage/TopLibraries/TopLibrary'
 import Footer from '../components/MainPage/Footer/Footer'
 import BooksCover from '../components/Books/BooksCover/BooksCover'
 import { Route, Routes } from 'react-router-dom'
+import BookPage from '../components/BookPage/BookPage/BookPage'
 
 const Root = () => {
   return (
@@ -31,6 +32,12 @@ const Root = () => {
         <Route path='/kitoblar' element={
           <>
             <BooksCover /> 
+          </>
+        }/>
+
+        <Route path='/kitob' element={
+          <>
+            <BookPage /> 
           </>
         }/>
        </Routes>

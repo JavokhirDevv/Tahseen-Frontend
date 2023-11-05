@@ -1,0 +1,69 @@
+.bookpage {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.details_and_related_books_cover {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* border: 1px solid black; */
+    font-family: "Poppins" sans-serif !important;
+
+}
+
+.related_books {
+    max-width: 440px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.relatedbookcards {
+    max-width: 400px;
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    overflow: auto;
+}
+
+.relatedbookcards::-webkit-scrollbar {
+    width: 6px;
+    /* Set the width of the scrollbar */
+    cursor: pointer;
+}
+
+/* Track */
+.relatedbookcards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Set the background color of the track */
+}
+
+/* Handle */
+.relatedbookcards::-webkit-scrollbar-thumb {
+    background: #0293FC;
+    /* Set the color of the scrollbar handle */
+    border-radius: 4px;
+    /* Optional: Rounded corners for the scrollbar handle */
+}
+
+.related_books h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0px;
+    font-family: 'Red Hat Display', sans-serif;
+}
