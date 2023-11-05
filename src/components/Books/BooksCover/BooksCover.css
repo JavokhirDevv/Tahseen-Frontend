@@ -2,14 +2,14 @@
     max-width: 1440px;
     width: 100%;
     margin: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .book_filter_list_cover{
     max-width: 1440px;
     width: 100%;
     margin: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
 }
 

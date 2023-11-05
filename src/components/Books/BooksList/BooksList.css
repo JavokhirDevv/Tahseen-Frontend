@@ -1,7 +1,7 @@
 .bookslist{
     max-width: 1140px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

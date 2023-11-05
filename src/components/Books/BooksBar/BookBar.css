@@ -5,14 +5,14 @@
 .bookbar {
     max-width: 1440px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .bookbar_filter{
     max-width: 1440px;
     width: 100%;
     height: 100px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
