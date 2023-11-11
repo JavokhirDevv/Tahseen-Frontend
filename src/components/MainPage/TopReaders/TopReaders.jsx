@@ -1,6 +1,6 @@
 import React from 'react'
 import './TopReaders.css'
-import UserCard from '../UserCard/UserCard'
+import UserCard from '../../GeneralComponents/UserCard/UserCard'
 
 const TopReaders = () => {
   return (

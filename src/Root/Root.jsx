@@ -7,10 +7,12 @@ import TopBooks from '../components/MainPage/TopBooks/TopBooks'
 import About from '../components/MainPage/About/About'
 import TahseenService from '../components/MainPage/TahseenServices/TahseenService'
 import TopLibrary from '../components/MainPage/TopLibraries/TopLibrary'
-import Footer from '../components/MainPage/Footer/Footer'
+import Footer from '../components/GeneralComponents/Footer/Footer'
 import BooksCover from '../components/Books/BooksCover/BooksCover'
 import { Route, Routes } from 'react-router-dom'
 import BookPage from '../components/BookPage/BookPage/BookPage'
+import Libraries from '../components/Libraries/Libraries'
+import Audiobooks from '../components/AudioBooks/AudioBooks/Audiobooks'
 
 const Root = () => {
   return (
@@ -38,6 +40,18 @@ const Root = () => {
         <Route path='/kitob' element={
           <>
             <BookPage /> 
+          </>
+        }/>
+        
+        <Route path='/kutubxonalar' element={
+          <>
+            <Libraries /> 
+          </>
+        }/>
+       
+        <Route path='/audio-kitoblar' element={
+          <>
+            <Audiobooks /> 
           </>
         }/>
        </Routes>

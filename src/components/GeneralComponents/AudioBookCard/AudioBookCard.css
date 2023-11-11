@@ -1,0 +1,41 @@
+.audiobookcard {
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Red Hat Display', sans-serif;
+}
+.audiobookcard_image_cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.audiobookcard_image {
+  height: 200px; /* Set the height according to your design */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.audiobookcard_title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.audiobookcard_author {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0px;
+}
+
+.audiobookcard_audio-player {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.audiobookcard_audio-player::-webkit-media-controls-download-button {
+  display: none; 
+}

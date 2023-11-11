@@ -1,6 +1,6 @@
 import React from 'react'
 import './TopBooks.css'
-import BookCard from '../BookCard/BookCard'
+import BookCard from '../../GeneralComponents/BookCard/BookCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';

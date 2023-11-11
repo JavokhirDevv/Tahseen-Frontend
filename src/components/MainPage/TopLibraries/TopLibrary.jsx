@@ -1,6 +1,6 @@
 import React from 'react'
 import './TopLibrary.css'
-import LibraryCard from '../LibraryCard/LibraryCard'
+import LibraryCard from '../../GeneralComponents/LibraryCard/LibraryCard'
 const TopLibrary = () => {
   return (
     <div className='top_library'>

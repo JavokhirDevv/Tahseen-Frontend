@@ -1,9 +1,9 @@
-.bookbar .rounded-lg{
+.audiobooksbar .rounded-lg{
     max-width: 600px;
     width: 100%;
 
 }
-.bookbar {
+.audiobooksbar {
     max-width: 1440px;
     width: 100%;
     /* border: 1px solid black; */
@@ -11,7 +11,7 @@
 
 }
 
-.bookbar_filter{
+.audiobooksbar_filter{
     max-width: 1440px;
     width: 100%;
     height: 100px;
@@ -22,7 +22,7 @@
 
 }
 /* Style the select box */
-.bookbar_filter-select {
+.audiobooksbar_filter-select {
     padding: 12px 20px;
     font-size: 16px;
     border: 2px solid #0293FC;
@@ -38,7 +38,7 @@
 }
 
 /* Style the select options */
-.bookbar_filter-select option {
+.audiobooksbar_filter-select option {
     padding: 12px 20px;
     font-size: 16px;
     color: black;
@@ -48,17 +48,17 @@
 }
 
 /* Remove default arrow in Firefox */
-.bookbar_filter-select::-moz-focus-inner {
+.audiobooksbar_filter-select::-moz-focus-inner {
     border: 0;
 }
 
 /* Remove default arrow in IE 10+ */
-.bookbar_filter-select::-ms-expand {
+.audiobooksbar_filter-select::-ms-expand {
     display: none;
 }
 
 /* Style the select arrow for Webkit browsers */
-.bookbar_filter-select::-webkit-select-arrow {
+.audiobooksbar_filter-select::-webkit-select-arrow {
     color: #0293FC;
     font-size: 14px;
 }

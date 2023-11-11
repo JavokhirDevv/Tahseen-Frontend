@@ -24,7 +24,6 @@ const About = () => {
 
         <p><font>Foydalanuvchi Profili va Ijara Tarixi: </font> Foydalanuvchilarga shaxsiy profil yaratish va ularga ijaraga olingan kitoblar tarixini ko'rsatish orqali ularni yoqtirgan vaqtincha saqlash.</p>
 
-        <p><font>Qo'llab-quvvatlash va Aloqa: </font>Foydalanuvchilarning takliflariga, savollari va muammolari javob bermaslikka o'rtacha vaqt ichida javob bermish bo'lish. </p>
 
     </div>
   )

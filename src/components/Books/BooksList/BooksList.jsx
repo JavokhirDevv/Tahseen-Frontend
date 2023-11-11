@@ -1,5 +1,5 @@
 import React from 'react'
-import BookCard from '../../MainPage/BookCard/BookCard'
+import BookCard from '../../GeneralComponents/BookCard/BookCard'
 import './BooksList.css'
 const BooksList = () => {
   return (

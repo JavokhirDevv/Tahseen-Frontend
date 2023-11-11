@@ -1,0 +1,85 @@
+.library {
+    max-width: 1440px;
+    width: 100%;
+    border: 1px solid black;
+    margin: auto;
+}
+.library .rounded-lg{
+    max-width: 600px;
+    width: 100%;
+}
+
+.library_filter{
+    max-width: 1440px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    margin: auto;
+}
+.library_filter h1{
+    text-align: center!important;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0px;
+    color: #0293FC;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+/* Style the select box */
+.library_filter-select {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #0293FC;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Style the select options */
+.library_filter-select option {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Remove default arrow in Firefox */
+.library_filter-select::-moz-focus-inner {
+    border: 0;
+}
+
+/* Remove default arrow in IE 10+ */
+.library_filter-select::-ms-expand {
+    display: none;
+}
+
+/* Style the select arrow for Webkit browsers */
+.library_filter-select::-webkit-select-arrow {
+    color: #0293FC;
+    font-size: 14px;
+}
+
+.library_cards_cover{
+    max-width: 1440px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
