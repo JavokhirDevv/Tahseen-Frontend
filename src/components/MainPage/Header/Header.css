@@ -41,6 +41,10 @@
     text-align: center;
 }
 
+.header .navbar ul li .active{
+    color: #0293FC;
+    border-bottom: 2px solid #0293FC;
+}
 .header .navbar ul li a{
     color: #434D54;
     display: block;

@@ -8,8 +8,8 @@ const UserCard = () => {
             <img src={img1} alt="" />
         </div>
         <h2>Andrew Huberman</h2>
-        <p><i class="fa-solid fa-list"></i> O`qilgan kitoblar soni: <font>358</font></p>
-        <p><i class="fa-solid fa-star"></i> Reyting: <font>1</font></p>
+        <p><i className="fa-solid fa-list"></i> O`qilgan kitoblar soni: <font>358</font></p>
+        <p><i className="fa-solid fa-star"></i> Reyting: <font>1</font></p>
     </div>
   )
 }

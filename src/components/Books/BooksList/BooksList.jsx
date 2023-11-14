@@ -1,20 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BookCard from '../../GeneralComponents/BookCard/BookCard'
 import './BooksList.css'
+import { booksMockData } from '../../../MockData/FakeData'
+
 const BooksList = () => {
+const [book, setBook] = useState(booksMockData);
   return (
     <div className='bookslist'>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
-        <BookCard className = "booklist_card"/>
+        {
+          book.map((e) => {
+            return(
+              <BookCard value={e} className = "booklist_card"/>
+            )
+          })
+        }
     </div>
   )
 }

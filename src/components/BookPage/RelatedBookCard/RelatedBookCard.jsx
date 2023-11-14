@@ -15,11 +15,11 @@ const RelatedBookCard = () => {
         <h5><font>Kutubxona:</font> Zahiriddin MuhammadBobur</h5>
         <div className="relatedbookcard_text_icon_and_button_cover">
         <span>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
         </span>
         <button>Ko`proq</button>
         </div>

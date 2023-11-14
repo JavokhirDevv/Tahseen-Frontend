@@ -3,28 +3,32 @@ import "./BookPageHeader.css";
 import img1 from "../../../assets/imgs/BookCard/1.jpg";
 import img2 from "../../../assets/imgs/AuthorImg/mYusuf.jpg";
 import img3 from "../../../assets/imgs/PublisherImg/1.jpg";
-const BookPageHeader = () => {
+const BookPageHeader = ({bookHeader}) => {
+  console.log(bookHeader);
+  if (!bookHeader) {
+    return null; // or some loading indicator
+  }
   return (
     <div className="bookpage_header">
       <div className="bookpage_header_img">
-        <img src={img1} alt="" />
+        <img src={bookHeader.BookImage} alt="" />
       </div>
 
       <div className="book_header_content">
-        <h1 className="book_header_name">Who will cry When You Dye</h1>
+        <h1 className="book_header_name">{bookHeader.Title}</h1>
         <div className="book_header_icons_cover">
           <span>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
 
             <strong> 5.0</strong>
           </span>
 
           <h5>
-            <i class="fa-regular fa-comment"></i> <strong>43</strong>
+            <i className="fa-regular fa-comment"></i> <strong>43</strong>
           </h5>
         </div>
 
@@ -47,7 +51,7 @@ const BookPageHeader = () => {
         </p>
         <br />
         <h4 className="book_header_available">
-          <i class="fa-regular fa-circle-check"></i> Mavjud
+          <i className="fa-regular fa-circle-check"></i> Mavjud
         </h4>
         <hr className="book_header_hr" />
 

@@ -1,16 +1,17 @@
 import React from "react";
 import "./BookPageDetails.css";
-const BookPageDetails = () => {
+const BookPageDetails = ({bookDetails}) => {
+  console.log(bookDetails);
   return (
     <div className="bookpagedetails">
       <h1>Kitob haqida Malumot</h1>
-      <table class="bookpagedetails_book_table">
+      <table className="bookpagedetails_book_table">
         
         <tr className="book_table_tr">
           <td>
             Author
           </td>
-          <td>Sherlock Holmes</td>
+          <td>{bookDetails.AuthorId}</td>
         </tr>
   
         

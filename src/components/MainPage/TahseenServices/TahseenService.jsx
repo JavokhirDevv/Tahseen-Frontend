@@ -7,7 +7,7 @@ const TahseenService = () => {
         <div className="service_card">
 
             <div className="service_card_icon">
-                <i class="fa-solid fa-book"></i>
+                <i className="fa-solid fa-book"></i>
             </div>
             
             <div className="service_card_text">
@@ -20,7 +20,7 @@ const TahseenService = () => {
         <div className="service_card">
 
             <div className="service_card_icon">
-            <i class="fa-solid fa-book-open-reader"></i>
+            <i className="fa-solid fa-book-open-reader"></i>
             </div>
             
             <div className="service_card_text">
@@ -33,7 +33,7 @@ const TahseenService = () => {
         <div className="service_card">
 
             <div className="service_card_icon">
-            <i class="fa-solid fa-headphones"></i>
+            <i className="fa-solid fa-headphones"></i>
             </div>
             
             <div className="service_card_text">

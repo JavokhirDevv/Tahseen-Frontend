@@ -18,7 +18,7 @@ const Libraries = () => {
               </div>
               <input
                 type="text"
-                class="w-full max-w-[560px] bg-white pl-2 text-base font-semibold outline-0"
+                className="w-full max-w-[560px] bg-white pl-2 text-base font-semibold outline-0"
                 placeholder=""
                 id=""
               />

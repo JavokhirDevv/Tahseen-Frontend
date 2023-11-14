@@ -14,12 +14,12 @@ const BooksCover = () => {
         <BooksList />
       </div>
       <div className="pagination_cover">
-        <div class="pagination">
-          <button class="prev-btn">&laquo; Previous</button>
-          <button class="page-btn active">1</button>
-          <button class="page-btn">2</button>
-          <button class="page-btn">3</button>
-          <button class="next-btn">Next &raquo;</button>
+        <div className="pagination">
+          <button className="prev-btn">&laquo; Previous</button>
+          <button className="page-btn active">1</button>
+          <button className="page-btn">2</button>
+          <button className="page-btn">3</button>
+          <button className="next-btn">Next &raquo;</button>
         </div>
       </div>
     </div>

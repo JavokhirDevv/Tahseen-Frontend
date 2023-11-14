@@ -1,63 +1,31 @@
-import React from 'react'
-import Header from '../components/MainPage/Header/Header'
-import Banner from '../components/MainPage/Banner/Banner'
-import TopReaders from '../components/MainPage/TopReaders/TopReaders'
-import Statistics from '../components/MainPage/Statistics/Statistics'
-import TopBooks from '../components/MainPage/TopBooks/TopBooks'
-import About from '../components/MainPage/About/About'
-import TahseenService from '../components/MainPage/TahseenServices/TahseenService'
-import TopLibrary from '../components/MainPage/TopLibraries/TopLibrary'
-import Footer from '../components/GeneralComponents/Footer/Footer'
-import BooksCover from '../components/Books/BooksCover/BooksCover'
-import { Route, Routes } from 'react-router-dom'
-import BookPage from '../components/BookPage/BookPage/BookPage'
-import Libraries from '../components/Libraries/Libraries'
-import Audiobooks from '../components/AudioBooks/AudioBooks/Audiobooks'
+import React from "react";
+import Header from "../components/MainPage/Header/Header";
+import Footer from "../components/GeneralComponents/Footer/Footer";
+import BooksCover from "../components/Books/BooksCover/BooksCover";
+import { Navigate, Route, Routes } from "react-router-dom";
+import BookPage from "../components/BookPage/BookPage/BookPage";
+import Libraries from "../components/Libraries/Libraries";
+import Audiobooks from "../components/AudioBooks/AudioBooks/Audiobooks";
+import MainPage from "../components/MainPage/MainPage/MainPage";
+import LoginPage from "../components/LoginSignUp/LoginPage";
 
 const Root = () => {
   return (
     <>
-      <Header/>
-       <Routes>
-        <Route path='/' element={
-          <>
-            <Banner/>
-            <TahseenService/>
-            <TopBooks/>
-            <Statistics/>
-            <TopReaders/>
-            <TopLibrary/>
-            <About/>
-          </>
-        }/>
+      <Routes>
+          <Route path="/login" element={<LoginPage />} />
+        <Route element={<Header />}>
+          <Route path="/bosh-sahifa" element={<MainPage />} />
+          <Route path="/kitoblar" element={<BooksCover />} />
+          <Route path="/kitob/:id" element={<BookPage />} />
+          <Route path="/kutubxonalar" element={<Libraries />} />
+          <Route path="/audio-kitoblar" element={<Audiobooks />} />
+        </Route>
 
-        <Route path='/kitoblar' element={
-          <>
-            <BooksCover /> 
-          </>
-        }/>
-
-        <Route path='/kitob' element={
-          <>
-            <BookPage /> 
-          </>
-        }/>
-        
-        <Route path='/kutubxonalar' element={
-          <>
-            <Libraries /> 
-          </>
-        }/>
-       
-        <Route path='/audio-kitoblar' element={
-          <>
-            <Audiobooks /> 
-          </>
-        }/>
-       </Routes>
-      <Footer/>
+        <Route path="/" element={<Navigate to={'/login'}/>}/>
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;
