@@ -6,20 +6,20 @@ const BookCard = ({ value }) => {
   return (
     <div className="bookcard">
       <div className="book_image_cover">
-        <img src={value.BookImage} alt="" />
+        <img src={value.bookImage} alt="" />
       </div>
-      <h4>{value.Title}</h4>
+      <h4>{value.title}</h4>
       <h3>
-        <font>Muallif:</font> {value.AuthorId}
+        <font>Muallif:</font> {value.author.firstName}
       </h3>
       <h3>
-        <font>Kutubxona</font> {value.LibraryId}
+        <font>Kutubxona</font> {value.libraryBranch.name}
       </h3>
       <h3>
-        <font>Janr:</font> {value.GenreId}
+        <font>Janr:</font> {value.genre.name}
       </h3>
       <h3>
-        <font>Mavjud nusxalar:</font> {value.AvailableCopies}
+        <font>Mavjud nusxalar:</font> {value.availableCopies}
       </h3>
       <div className="book_card_icons">
         <span>
