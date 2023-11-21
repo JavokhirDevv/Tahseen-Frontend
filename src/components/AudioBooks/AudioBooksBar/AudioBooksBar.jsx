@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AudioBooksBar.css";
+import axios from "axios";
 const AudioBooksBar = () => {
+  const [authors, setAuthors] = useState([]);
+  useEffect(() => {
+    axios.get("https://localhost:7020/api/authors")
+    .then(a => setAuthors(a.data.data))
+    .catch((error) => console.log(error))
+  }, [])
   return (
     <div className="audiobooksbar">
       <div className="flex items-center justify-center p-5">
@@ -33,38 +40,32 @@ const AudioBooksBar = () => {
       <div className="audiobooksbar_filter">
         <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
-            Viloyat
-          </option>
-          <option value="non-fiction">Andijon</option>
-          <option value="non-fiction">Buxoro</option>
-          <option value="non-fiction">Toshkent</option>
-          <option value="non-fiction">Samarqand</option>
-          <option value="non-fiction">Qashqadaryo</option>
-          <option value="non-fiction">Farg`ona</option>
-          <option value="non-fiction">Namangan</option>
-          <option value="non-fiction">Xorazm</option>
-          <option value="non-fiction">Jizzax</option>
-        </select>
-
-        <select className="audiobooksbar_filter-select">
-          <option value="" disabled selected hidden>
-            Kutubxonalar
-          </option>
-          <option value="non-fiction">Alisher Navoiy</option>
-          <option value="non-fiction">Milliy kutubxona</option>
-          <option value="non-fiction">
-            Zahiriddin Muhammad Bobur kutubxona
-          </option>
-        </select>
-
-        <select className="audiobooksbar_filter-select">
-          <option value="" disabled selected hidden>
             Til
           </option>
-          <option value="non-fiction">Arab Tili</option>
-          <option value="fiction">O`zbek tili</option>
-          <option value="mystery">Ingliz tili</option>
-          <option value="sci-fi">Rus tili</option>
+          <option value="non-fiction">O`zbek</option>
+          <option value="non-fiction">Rus</option>
+          <option value="non-fiction">Ingliz</option>
+        </select>
+
+        <select className="audiobooksbar_filter-select">
+          <option value="" disabled selected hidden>
+            Mualliflar
+          </option>
+          {
+            authors.map((value) => {
+              return (
+                <option value={`${value.firstName + " " + value.lastName}`} key={value.id}>{value.firstName + " " + value.lastName}</option>
+              )
+            })
+          }
+        </select>
+
+        <select className="audiobooksbar_filter-select">
+          <option value="" disabled selected hidden>
+            Suxandonlar
+          </option>
+          {/* Map */}
+          {/* <option value="non-fiction">Arab Tili</option> */}
         </select>
       </div>
     </div>

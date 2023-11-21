@@ -1,7 +1,8 @@
-.audiobook{
+.audio_book_page {
     max-width: 1440px;
     width: 100%;
     height: auto;
     border: 1px solid black;
     margin: auto;
+    padding: 20px 0px;
 }

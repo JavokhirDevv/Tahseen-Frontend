@@ -6,29 +6,34 @@ import RelatedBookCard from "../RelatedBookCard/RelatedBookCard";
 import TopBooks from "../../MainPage/TopBooks/TopBooks";
 import { useParams } from "react-router-dom";
 import { booksMockData } from "../../../MockData/FakeData";
+import axios from "axios";
 
 const BookPage = () => {
   const { id } = useParams();
-  const [book, setBook] = useState(null); // Initialize with null to handle loading state
+  const [books, setBooks] = useState([]); // Initialize books as an empty array
 
-  useEffect(() => {
-    const fetchBook = async () => {
-      // Simulate an asynchronous data fetch
-      const result = booksMockData.find((e) => e.id == id);
-      setBook(result);
-    };
-
-    fetchBook();
-  }, [id]);
-
-  console.log(book);
-  console.log(id);
-
+  const GetAllBooks = async () => {
+    await axios.get("https://localhost:7020/api/Books")
+    .then(response => {
+      const foundBook = response.data.data.find((book) => book.id == id);
+      if (foundBook) {
+        setBooks(foundBook); // Wrap the found book in an array
+      } else {
+        console.log(`Book with ID ${id} not found`);
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+}
+useEffect(() => {
+  GetAllBooks()
+}, [id])
   return (
     <div className="bookpage">
-      <BookPageHeader bookHeader={book} />
+      <BookPageHeader bookHeader={books} />
       <div className="details_and_related_books_cover">
-        {book && <BookPageDetails bookDetails={book} />} {/* Only render if book is available */}
+        {<BookPageDetails bookDetails={books} />} 
         <div className="related_books">
           <h1>Muallifga tegishli kitoblar ro`yhati</h1>
           <div className="relatedbookcards">

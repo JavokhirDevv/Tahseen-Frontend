@@ -8,6 +8,7 @@ import Libraries from "../components/Libraries/Libraries";
 import Audiobooks from "../components/AudioBooks/AudioBooks/Audiobooks";
 import MainPage from "../components/MainPage/MainPage/MainPage";
 import LoginPage from "../components/LoginSignUp/LoginPage";
+import AudioBookPage from "../components/AudioBookPage/AudioBookPage/AudioBookPage";
 
 const Root = () => {
   return (
@@ -20,6 +21,7 @@ const Root = () => {
           <Route path="/kitob/:id" element={<BookPage />} />
           <Route path="/kutubxonalar" element={<Libraries />} />
           <Route path="/audio-kitoblar" element={<Audiobooks />} />
+          <Route path="/audio-kitob" element={<AudioBookPage />} />
         </Route>
 
         <Route path="/" element={<Navigate to={'/login'}/>}/>
