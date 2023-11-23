@@ -1,18 +1,20 @@
 import React from 'react'
 import './LibraryCard.css'
-import img1 from '../../../assets/imgs/LibraryCard/1.png'
-const LibraryCard = () => {
+import { Link } from 'react-router-dom'
+import api_base_url from '../../../configurations/Config'
+const LibraryCard = ({LibraryData}) => {
   return (
     <div className='library_card'>
         <div className="library_card_image_cover">
-        <   img src={img1} alt="" />
+        {LibraryData && <img src={api_base_url+"/"+LibraryData.image} alt="" />}
         </div>
-        <h3>Alisher Navoiy</h3>
-        <p><i className="fa-solid fa-book"></i> Jami kitoblar soni: <font>4512</font></p>
-        <p><i className="fa-solid fa-star"></i> Reyting: <font>1</font></p>
-        <p><i className="fa-solid fa-location-dot"></i> Joylashuv: <font>www.location.com</font></p>
+        <h3>{LibraryData.name}</h3>
+        <p><i className="fa-solid fa-location-dot"></i> Manzil: <font>{LibraryData.address}</font></p>
+        <p><i className="fa-solid fa-phone"></i> Telefon raqam: <font>{LibraryData.phoneNumber}</font></p>
         <div className="library_card_button">
+        <Link to={`/kutubxona/${LibraryData.id}`} className="librarycard_button_cover">
           <button>Ko`proq</button>
+        </Link>
         </div>
     </div>
   )

@@ -1,24 +1,26 @@
-.topbooks{
+.authors{
     max-width: 1440px;
     width: 100%;
     height: auto;
+    padding: 20px 0px;
+    border: 1px solid red;
     margin: auto;
-    padding: 20px 30px;
-    /* border: 1px solid black; */
-    
 
 }
-.topbooks h1{
+
+.authors h1{
+    text-align: center!important;
+    font-size: 25px;
     text-align: center;
     margin: 10px 0px;
     color: #0293FC;
     font-family: 'Red Hat Display', sans-serif;
-    font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
-
-.topbooks .mySwiper{
-    height: 500px;
+.author_card_cover{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }

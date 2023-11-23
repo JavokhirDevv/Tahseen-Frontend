@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/MainPage/Header/Header";
-import Footer from "../components/GeneralComponents/Footer/Footer";
 import BooksCover from "../components/Books/BooksCover/BooksCover";
 import { Navigate, Route, Routes } from "react-router-dom";
 import BookPage from "../components/BookPage/BookPage/BookPage";
@@ -9,6 +8,9 @@ import Audiobooks from "../components/AudioBooks/AudioBooks/Audiobooks";
 import MainPage from "../components/MainPage/MainPage/MainPage";
 import LoginPage from "../components/LoginSignUp/LoginPage";
 import AudioBookPage from "../components/AudioBookPage/AudioBookPage/AudioBookPage";
+import LibraryPage from "../components/LibraryPage/LibraryPage/LibraryPage";
+import Authors from "../components/Authors/Authors";
+import AuthorPage from "../components/AuthorPage/AuthorPage";
 
 const Root = () => {
   return (
@@ -22,6 +24,10 @@ const Root = () => {
           <Route path="/kutubxonalar" element={<Libraries />} />
           <Route path="/audio-kitoblar" element={<Audiobooks />} />
           <Route path="/audio-kitob" element={<AudioBookPage />} />
+          <Route path="/kutubxona/:id" element={<LibraryPage />} />
+          <Route path="/audio-kitob/:id" element={<AudioBookPage />} />
+          <Route path="/mualliflar" element={<Authors />} />
+          <Route path="/muallif/:id" element={<AuthorPage />} />
         </Route>
 
         <Route path="/" element={<Navigate to={'/login'}/>}/>

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./AudioBooksBar.css";
 import axios from "axios";
+import api_base_url from "../../../configurations/Config";
 const AudioBooksBar = () => {
   const [authors, setAuthors] = useState([]);
   useEffect(() => {
-    axios.get("https://localhost:7020/api/authors")
+    axios.get(`${api_base_url}api/authors`)
     .then(a => setAuthors(a.data.data))
     .catch((error) => console.log(error))
   }, [])

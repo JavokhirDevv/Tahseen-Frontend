@@ -1,12 +1,13 @@
 import React from "react";
 import "./BookCard.css";
 import { Link } from "react-router-dom";
+import api_base_url from "../../../configurations/Config";
 // import img1 from "../../../assets/imgs/BookCard/1.jpg";
 const BookCard = ({ value }) => {
   return (
     <div className="bookcard">
       <div className="book_image_cover">
-        <img src={value.bookImage} alt="" />
+        <img src={api_base_url+value.bookImage} alt="" />
       </div>
       <h4>{value.title}</h4>
       <h3>

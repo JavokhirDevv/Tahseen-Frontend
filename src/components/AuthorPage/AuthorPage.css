@@ -1,4 +1,4 @@
-.bookpage_header {
+.author_page_header {
     max-width: 1400px;
     width: 100%;
     height: auto;
@@ -11,7 +11,7 @@
 
 }
 
-.bookpage_header .bookpage_header_img {
+.author_page_header .author_page_header_img {
     max-width: 510px;
     width: 100%;
     height: 530px;
@@ -22,12 +22,12 @@
     overflow: hidden;
 }
 
-.bookpage_header .bookpage_header_img img {
+.author_page_header .author_page_header_img img {
     height: 450px;
     border-radius: 20px;    
 }
 
-.book_header_content {
+.author_page_content {
     max-width: 800px;
     width: 100%;
     height: auto;
@@ -36,22 +36,22 @@
     margin-top: 30px;
 }
 
-.book_header_name {
+.author_page_name {
     font-size: 33px;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 400;
 }
 
-.book_header_content span {
+.author_page_content span {
     text-align: left;
     color: #0293FC;
 }
 
-.book_header_content span i {
+.author_page_content span i {
     margin-left: 5px;
 }
 
-.book_header_content span strong {
+.author_page_content span strong {
     margin-left: 8px;
     font-size: 18px;
     color: black;
@@ -59,24 +59,24 @@
 
 }
 
-.book_header_icons_cover {
+.author_page_icons_cover {
     display: flex;
     /* border: 1px solid black; */
     margin-bottom: 15px;
 }
 
-.book_header_icons_cover h5 {
+.author_page_icons_cover h5 {
     margin-left: 40px;
 }
 
-.book_header_icons_cover .fa-comment {
+.author_page_icons_cover .fa-comment {
     color: #0293FC;
     font-size: 18px;
     margin-right: 10px;
     margin-top: 5px;
 }
 
-.book_header_content p {
+.author_page_content p {
     font-size: 13px;
     color: rgb(60, 60, 60);
     font-family: 'Poppins', sans-serif;
@@ -85,11 +85,11 @@
     line-height: 22px;
 }
 
-.book_header_hr {
+.author_page_hr {
     border: 1px solid rgb(120, 120, 120);
 }
 
-.book_header_bottom_side {
+.author_page_bottom_side {
     max-width: 800px;
     width: 100%;
     height: 100px;
@@ -100,7 +100,7 @@
     align-items: center;
 }
 
-.book_header_title_img_name {
+.author_page_title_img_name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -109,11 +109,11 @@
     width: 100%;
 }
 
-.book_header_title {
+.author_page_title {
     margin-left: 10px;
 }
 
-.book_header_title_img_name img {
+.author_page_title_img_name img {
     max-width: 50px;
     width: 100%;
     height: 50px;
@@ -121,17 +121,17 @@
     object-fit: cover;
 }
 
-.book_header_title_img_name h6 {
+.author_page_title_img_name h6 {
     font-size: 13px;
     font-weight: 400;
 }
 
-.book_header_title_img_name h4 {
+.author_page_title_img_name h4 {
     font-size: 16px;
     font-weight: 400;
 }
 
-.book_header_available {
+.author_page_available {
     max-width: 100px;
     width: 100%;
     border-radius: 10px;
@@ -142,13 +142,13 @@
 
 }
 
-.book_header_available .fa-circle-check {
+.author_page_available .fa-circle-check {
     color: #0293FC;
     margin-right: 10px;
 }
 
 
-.bookpage_save {
+.author_page_save {
     max-width: 100px;
     width: 100%;
     height: 40px;
@@ -158,7 +158,7 @@
     transition: all 0.3s;
 }
 
-.bookpage_save:active {
+.author_page_save:active {
     max-width: 100px;
     width: 100%;
     height: 40px;
@@ -168,7 +168,7 @@
     scale: 1.03;
 }
 
-.bookpage_save:hover {
+.author_page_save:hover {
     background: #0293FC;
     color: white;
 }

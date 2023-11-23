@@ -5,15 +5,15 @@ import BookPageDetails from "../BookPageDetails/BookPageDetails";
 import RelatedBookCard from "../RelatedBookCard/RelatedBookCard";
 import TopBooks from "../../MainPage/TopBooks/TopBooks";
 import { useParams } from "react-router-dom";
-import { booksMockData } from "../../../MockData/FakeData";
 import axios from "axios";
+import api_base_url from "../../../configurations/Config";
 
 const BookPage = () => {
   const { id } = useParams();
   const [books, setBooks] = useState([]); // Initialize books as an empty array
 
   const GetAllBooks = async () => {
-    await axios.get("https://localhost:7020/api/Books")
+    await axios.get(`${api_base_url}api/Books`)
     .then(response => {
       const foundBook = response.data.data.find((book) => book.id == id);
       if (foundBook) {

@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Libraries.css";
 import LibraryCard from "../GeneralComponents/LibraryCard/LibraryCard";
+import axios from "axios";
+import api_base_url from "../../configurations/Config";
 const Libraries = () => {
+  const [libraries, setLibraries] = useState([])
+  var GetAllLibraries = async () =>{
+    await axios.get(`${api_base_url}api/LibraryBranch`)
+    .then(l => setLibraries(l.data.data))
+    .catch(err => console.log(err))
+  }
+  useEffect(() =>{
+    GetAllLibraries();
+  }, [])
+  console.log(libraries);
   return (
     <div className="library">
         <div className="flex items-center justify-center p-5">
@@ -50,16 +62,13 @@ const Libraries = () => {
         </div>
 
         <div className="library_cards_cover">
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
-            <LibraryCard />
+          {
+            libraries.map(LibraryData => {
+              return(
+                <LibraryCard LibraryData={LibraryData}/>
+              )
+            })
+          }
         </div>
     </div>
   );

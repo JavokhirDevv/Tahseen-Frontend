@@ -10,7 +10,7 @@ const BookPageHeader = ({ bookHeader }) => {
   return (
     <div className="bookpage_header">
       <div className="bookpage_header_img">
-        <img src={`${bookHeader.bookImage}`} alt="" />
+        <img src={`${api_base_url + bookHeader.bookImage}`} alt="" />
       </div>
 
       <div className="book_header_content">
@@ -33,21 +33,7 @@ const BookPageHeader = ({ bookHeader }) => {
         </div>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi,
-          consectetur. Nesciunt, impedit corporis? Iste autem temporibus
-          aliquam, non saepe corporis voluptatibus eos, perspiciatis dicta dolor
-          incidunt esse cum, accusamus placeat? Ex corrupti eos rem, minima
-          assumenda eius. Cupiditate eveniet necessitatibus quaerat, dolorem
-          corporis assumenda excepturi deleniti animi voluptatem nisi omnis!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos libero
-          adipisci expedita natus voluptate ipsum autem provident, rem hic
-          deleniti amet quasi enim ipsam, tempore at atque nam quo qui cumque
-          odio praesentium facilis nulla esse ducimus! Doloribus, exercitationem
-          cumque rem mollitia labore quas eaque! Eligendi nihil dolores dolor
-          doloremque pariatur soluta earum, beatae sed quibusdam quas?
-          Aspernatur, rem corporis.
+          {bookHeader.content}
         </p>
         <br />
         <h4 className="book_header_available">
@@ -60,8 +46,7 @@ const BookPageHeader = ({ bookHeader }) => {
           <div className="book_header_title_img_name">
             {author && (
               <img
-                src={`${api_base_url}/${author.authorImage}`}
-                alt={`Author ${author.firstName} ${author.lastName}`}
+                src={`${api_base_url}${author.authorImage}`}
               />
             )}
 
@@ -72,13 +57,10 @@ const BookPageHeader = ({ bookHeader }) => {
           </div>
 
           <div className="book_header_title_img_name">
-            {publisher && (<img
-              src={`${api_base_url}/${publisher.image}`}
-              alt=""
-            />)}
+            {publisher && <img src={`${api_base_url}${publisher.image}`} />}
             <div className="book_header_title">
               <h6>Nashiriyot</h6>
-              <h4>Hilol kitob do`koni</h4>
+              <h4>{publisher && publisher.name}</h4>
             </div>
           </div>
 
