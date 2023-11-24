@@ -11,12 +11,13 @@ import AudioBookPage from "../components/AudioBookPage/AudioBookPage/AudioBookPa
 import LibraryPage from "../components/LibraryPage/LibraryPage/LibraryPage";
 import Authors from "../components/Authors/Authors";
 import AuthorPage from "../components/AuthorPage/AuthorPage";
+import LibrarianDashboard from "../components/DashboardLibrarian/LibrarianDashboard/LibrarianDashboard";
 
 const Root = () => {
   return (
     <>
       <Routes>
-          <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route element={<Header />}>
           <Route path="/bosh-sahifa" element={<MainPage />} />
           <Route path="/kitoblar" element={<BooksCover />} />
@@ -30,7 +31,8 @@ const Root = () => {
           <Route path="/muallif/:id" element={<AuthorPage />} />
         </Route>
 
-        <Route path="/" element={<Navigate to={'/login'}/>}/>
+        <Route path="/kutubxonachi/*" element={<LibrarianDashboard />} />
+        <Route path="/" element={<Navigate to={"/login"} />} />
       </Routes>
     </>
   );

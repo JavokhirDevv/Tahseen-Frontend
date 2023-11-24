@@ -1,0 +1,59 @@
+.librarian_dashboard_navbar {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+.librarian_dashboard_navbar img{
+    max-width: 200px;
+    width: 100%;
+    margin-left: 10px;
+}
+.librarian_navbar_text_cover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.librarian_navbar_text_cover img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.librarian_navbar_text_cover i{
+    color: #0293FC;
+    margin-right: 20px;
+    font-size: 25px;
+}
+.librarian_fullname{
+    margin: 0px 20px;
+}
+.librarian_navbar_text_cover h5{
+    font-size: 16px;
+}
+.librarian_navbar_text_cover p{
+    font-size: 14px;
+    text-align: right;
+}
+.librarian_dashboard_navbar form{
+    max-width: 500px;
+    width: 100%;
+}
+.librarian_dashboard_navbar form input{
+    max-width: 500px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: #F8F8F8;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

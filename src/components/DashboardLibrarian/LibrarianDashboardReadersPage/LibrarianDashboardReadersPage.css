@@ -1,0 +1,88 @@
+.librarian_dashboard_readers_page {
+    max-width: 1300px;
+    width: 100%;
+    border-radius: 20px;
+    height: 380px;
+    /* border: 1px solid red; */
+    overflow: auto;
+}
+
+
+
+.librarian_dashboard_readers_page::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+    cursor: pointer;
+}
+
+/* Track */
+.librarian_dashboard_readers_page::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Set the background color of the track */
+}
+
+/* Handle */
+.librarian_dashboard_readers_page::-webkit-scrollbar-thumb {
+    background: #F65867;
+    /* Set the color of the scrollbar handle */
+    border-radius: 4px;
+    /* Optional: Rounded corners for the scrollbar handle */
+}
+
+
+.readers_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.readers_table th,
+.readers_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.readers_table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+.readers_table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.readers_table button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.readers_table button:hover {
+    background-color: #45a049;
+}
+
+.librarian_dashboard_user_image img{
+    margin: auto;
+}
+
+.librarian_dashboard_borrow_books{
+    width: 120px;
+}
+.librarian_dashboard_fine{
+    width: 70px;
+    text-align: center!important;
+
+}
+.librarian_dashboard_details_size{
+    width: 135px;
+    
+}

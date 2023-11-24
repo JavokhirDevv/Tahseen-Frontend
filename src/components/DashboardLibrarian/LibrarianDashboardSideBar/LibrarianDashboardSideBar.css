@@ -1,0 +1,53 @@
+.librarian_dashboard_sidebar {
+  max-width: 260px;
+  width: 100%;
+  height: 650px;
+  padding: 20px;
+  background: #F5F7FA;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.librarian_dashboard_sidebar ul {
+  max-width: 250px;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.librarian_dashboard_sidebar ul li {
+  list-style: none;
+  transition: all 0.3s ease;
+  border: 2px solid #1E3A8A;
+  /* Darker blue border */
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.librarian_dashboard_sidebar .sidebar_link {
+  color: #1E3A8A;
+  /* Dark blue text color */
+  font-size: 15px;
+  display: block;
+  font-weight: 500;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.librarian_dashboard_sidebar .sidebar_link:hover {
+  margin-left: 10px;
+}
+
+.librarian_dashboard_sidebar .sidebar_link i {
+  margin-right: 10px;
+  max-width: 20px;
+  width: 100%;
+  color: #1E3A8A;
+  /* Dark blue icon color */
+}
+
+.librarian_dashboard_sidebar .active{
+  margin-left: 10px;
+
+}
