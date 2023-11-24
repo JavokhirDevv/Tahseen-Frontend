@@ -1,27 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
-const LoginPage = () => {
-    const navigate = useNavigate()
-    const [login, SetLogin] = useState({
-        LoginEmail: '',
-        LoginPassword : '',
-    })
 
-    const GetLoginInfo = (e) => {
-        SetLogin({...login, [e.target.name]: e.target.value})
+const LoginPage = () => {
+  const navigate = useNavigate();
+  const [login, setLogin] = useState({
+    LoginEmail: "",
+    LoginPassword: "",
+  });
+
+  const GetLoginInfo = (e) => {
+    setLogin({ ...login, [e.target.name]: e.target.value });
+  };
+
+  const CheckAuth = (e) => {
+    e.preventDefault();
+    var errorMessage = document.querySelector(".error_message");
+    if (
+      login.LoginEmail === "hello@gmail.com" &&
+      login.LoginPassword === "222"
+    ) {
+      navigate("/bosh-sahifa");
+    } else {
+      errorMessage.style.display = "block";
     }
-    const CheckAuth = (e) => {
-        e.preventDefault();
-        var errorMessage = document.querySelector(".error_message")
-        if(login.LoginEmail == "hello@gmail.com" && login.LoginPassword == "222"){
-            navigate('/bosh-sahifa')
-        }
-        else{
-            errorMessage.style.display = "block";
-        }
+  };
+
+  useEffect(() => {
+    const container = document.getElementById("container");
+    const registerBtn = document.getElementById("register");
+    const loginBtn = document.getElementById("login");
+
+    if (container && registerBtn && loginBtn) {
+      registerBtn.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      loginBtn.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
     }
-    console.log(login);
+
+    // Cleanup event listeners when the component is unmounted
+    return () => {
+      if (registerBtn) {
+        registerBtn.removeEventListener("click", () => {
+          container.classList.add("active");
+        });
+      }
+      if (loginBtn) {
+        loginBtn.removeEventListener("click", () => {
+          container.classList.remove("active");
+        });
+      }
+    };
+  }, []);
   return (
     <div className="login_container_cover">
       <div className="login_container" id="container">
@@ -49,7 +82,7 @@ const LoginPage = () => {
             <input type="password" placeholder="Parol" />
             <button>Ro'yxatdan o'tish</button>
           </form>
-        </div> 
+        </div>
         {/* Sign Up */}
 
         {/* Login */}
@@ -71,8 +104,18 @@ const LoginPage = () => {
               </a>
             </div>
             <span>yoki o'zingizning e-mailingizdan foydalaning</span>
-            <input name="LoginEmail" onChange={GetLoginInfo} type="email" placeholder="Email" />
-            <input name="LoginPassword" onChange={GetLoginInfo} type="password" placeholder="Parol" />
+            <input
+              name="LoginEmail"
+              onChange={GetLoginInfo}
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              name="LoginPassword"
+              onChange={GetLoginInfo}
+              type="password"
+              placeholder="Parol"
+            />
             <h3 className="error_message">Email yoki parol noto`g`ri</h3>
             <a href="#">Parolni unutdingizmi?</a>
             <button onClick={CheckAuth}>Kirish</button>
@@ -88,7 +131,7 @@ const LoginPage = () => {
               <p>
                 Ro'yxatdan o'tayotganingiz uchun minnatdorchilik bildiramiz!
               </p>
-              <button className="hidden" id="login">
+              <button id="login">
                 Kirish
               </button>
             </div>
@@ -96,9 +139,9 @@ const LoginPage = () => {
               <h1>Assalomu alaykum!</h1>
               <p>
                 Saytning barcha imkoniyatlaridan foydalanish uchun shaxsiy
-                ma'lumotlaringiz bilan ro'yxatdan o'ting
+                ma'lumotlaringiz bilan ro'yxatdan o'ting.
               </p>
-              <button className="hidden" id="register">
+              <button id="register">
                 Ro'yxatdan o'tish
               </button>
             </div>
