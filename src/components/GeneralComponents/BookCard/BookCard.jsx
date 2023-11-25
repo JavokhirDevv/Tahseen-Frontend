@@ -2,12 +2,14 @@ import React from "react";
 import "./BookCard.css";
 import { Link } from "react-router-dom";
 import api_base_url from "../../../configurations/Config";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 // import img1 from "../../../assets/imgs/BookCard/1.jpg";
 const BookCard = ({ value }) => {
   return (
     <div className="bookcard">
       <div className="book_image_cover">
-        <img src={api_base_url+value.bookImage} alt="" />
+        <img src={api_base_url + value.bookImage} alt="" />
       </div>
       <h4>{value.title}</h4>
       <h3>
@@ -23,13 +25,11 @@ const BookCard = ({ value }) => {
         <font>Mavjud nusxalar:</font> {value.availableCopies}
       </h3>
       <div className="book_card_icons">
-        <span>
-          <i className="fa-solid fa-star"></i>
-          <i className="fa-solid fa-star"></i>
-          <i className="fa-solid fa-star"></i>
-          <i className="fa-solid fa-star"></i>
-          <i className="fa-solid fa-star"></i>
-        </span>
+        <Stack spacing={1}>
+          <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+        
+        </Stack>
+
         <i className="fa-regular fa-bookmark"></i>
       </div>
       <div className="bookcard_button">

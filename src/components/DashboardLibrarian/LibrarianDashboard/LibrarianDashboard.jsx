@@ -75,39 +75,7 @@ const LibrarianDashboard = () => {
         <div className="librarian_dashboard_main_side">
           <h1>Assalomu alekum John</h1>
           <h5>{currentDate}</h5>
-          <div className="librarian_dashboard_main_side_statistics_cards_cover">
-            <div className="librarian_dashboard_main_side_statistics_card">
-              <div>
-                <h2>1222</h2>
-                <h4>Total students</h4>
-              </div>
-              <i class="fa-solid fa-users"></i>
-            </div>
-
-            <div className="librarian_dashboard_main_side_statistics_card">
-              <div>
-                <h2>740</h2>
-                <h4>Borrowed books</h4>
-              </div>
-              <i class="fa-solid fa-users"></i>
-            </div>
-
-            <div className="librarian_dashboard_main_side_statistics_card">
-              <div>
-                <h2>1222</h2>
-                <h4>Total students</h4>
-              </div>
-              <i class="fa-solid fa-users"></i>
-            </div>
-
-            <div className="librarian_dashboard_main_side_statistics_card">
-              <div>
-                <h2>1222</h2>
-                <h4>Total students</h4>
-              </div>
-              <i class="fa-solid fa-users"></i>
-            </div>
-          </div>
+         
           <div className="library_dashboard_libray_page_change">
             <Routes>
               <Route path="/" element={<Navigate to={"/kutubxonachi/kutubxona"} />} />

@@ -2,9 +2,10 @@
     max-width: 1300px;
     width: 100%;
     border-radius: 20px;
-    height: 380px;
+    height: 450px;
     /* border: 1px solid red; */
     overflow: auto;
+
 }
 
 
@@ -31,6 +32,7 @@
 
 
 .readers_table {
+    max-width: 100%;
     width: 100%;
     border-collapse: collapse;
 }
@@ -46,6 +48,7 @@
     background-color: #f2f2f2;
     position: sticky;
     top: 0;
+    z-index: 23;
     text-align: center;
 }
 
@@ -82,7 +85,38 @@
     text-align: center!important;
 
 }
-.librarian_dashboard_details_size{
-    width: 125px;
-    
+.librarian_dashboard_details_size {
+    width: 135px;
+
+}
+.librarian_dashboard_id_size {
+    width: 45px;
+    text-align: center!important;
+
+}
+.librarian_dashboard_image_size {
+    width: 100px;
+}
+.librarian_dashboard_fullname_size {
+    width: 180px;
+}
+.librarian_dashboard_fine_size {
+    width: 50px;
+    text-align: center!important;
+}
+.librarian_dashboard_image_size img {
+    margin: auto;
+}
+.librarian_dashboard_add_user_button{
+    margin: 10px!important;
+    color: #0293FC!important;
+}
+.librarian_dashboard_readers_page_button_cover{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.librarian_dashboard_delete_button{
+    display: flex;
 }
