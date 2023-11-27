@@ -7,6 +7,7 @@ import "./LibrarianDashboard.css";
 import LibrarianDashboardLibraryPage from "../LibrarianDashboardLibraryPage/LibrarianDashboardLibraryPage";
 import { Navigate, Route, Routes } from "react-router-dom";
 import LibrarianDashboardReadersPage from "../LibrarianDashboardReadersPage/LibrarianDashboardReadersPage";
+import LibrarianDashboardAddReader from "../LibrarianDashboardAddReader/LibrarianDashboardAddReader";
 const LibrarianDashboard = () => {
   const [currentDate, setCurrentDate] = useState("");
 
@@ -87,6 +88,10 @@ const LibrarianDashboard = () => {
               <Route
                 path="/kitobxonlar" // This path will match /kutubxonachi/kutubxona
                 element={<LibrarianDashboardReadersPage/>}
+              />
+              <Route
+                path="/yangi-kitobxon" // This path will match /kutubxonachi/kutubxona
+                element={<LibrarianDashboardAddReader/>}
               />
               {/* Add more nested routes for LibrarianDashboard as needed */}
             </Routes>

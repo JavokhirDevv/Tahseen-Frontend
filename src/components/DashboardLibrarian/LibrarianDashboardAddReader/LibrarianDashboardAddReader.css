@@ -1,0 +1,36 @@
+.librarian_dashboard_add_reader{
+    max-width: 1300px;
+    width: 100%;
+    border-radius: 10px;
+    height: 450px;
+    border: 1px solid red;
+    overflow: auto;
+    padding: 5px;
+
+}
+.librarian_dashboard_add_reader::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+    cursor: pointer;
+}
+
+/* Track */
+.librarian_dashboard_add_reader::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Set the background color of the track */
+}
+
+/* Handle */
+.librarian_dashboard_add_reader::-webkit-scrollbar-thumb {
+    background: #F65867;
+    /* Set the color of the scrollbar handle */
+    border-radius: 4px;
+    /* Optional: Rounded corners for the scrollbar handle */
+}
+
+.librarian_dashboard_add_reader_input{
+    max-width: 300px;
+    width: 100%;
+    margin: 15px 25px!important;
+    display: block;
+}

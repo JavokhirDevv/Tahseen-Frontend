@@ -50,4 +50,5 @@
     background: white;
     padding: 10px 15px;
     overflow: hidden;
+    border: 1px solid red;
 }
