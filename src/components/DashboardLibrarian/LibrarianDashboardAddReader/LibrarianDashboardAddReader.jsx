@@ -19,13 +19,10 @@ const LibrarianDashboardAddReader = () => {
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
-        if (
-
-            newReader.DateOfBirth == ''
-        )
+        if (newReader.DateOfBirth == '') 
         {
             console.log('All fields must be filled');
-        } 
+        }
         else {
             setOpen(true);
         }
