@@ -249,9 +249,23 @@
 
 .countdown-timer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     scale: 0.6;
     font-size: 50px!important;
+    color: black;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    
+}
 
+.SendCodeAgain{
+    color: #0293FC;
+    border: none;
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: 20px;
+    font-family: "Red Hat Display", sans-serif;
 }

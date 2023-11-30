@@ -17,8 +17,10 @@ const LoginPage = () => {
     LoginEmail: "",
     LoginPassword: "",
   });
-  
+  const [timerKey, setTimerKey] = useState(0); // Key to reset the countdown timer
+
   const [isRegistrationButtonDisabled, setIsRegistrationButtonDisabled] = useState(false);
+  const [isSendCodeButtonDisabled, setIsSendCodeButtonDisabled] = useState(false);
 
   const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
@@ -110,7 +112,9 @@ const LoginPage = () => {
 
 
   const handleClickOpen = () => {
-    var result = axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
+    setIsRegistrationButtonDisabled(true);
+
+    axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
       .then(res => {
         setIsRegistrationButtonDisabled(false);
         setOpen(true);
@@ -138,13 +142,54 @@ const LoginPage = () => {
         console.log(error);
       });
 
-    if (result === true) {
 
-    }
-    setIsRegistrationButtonDisabled(true);
-
+    setTimeout(() => {
+      let sendCodeStyle = document.querySelector(".SendCodeAgain");
+      if (sendCodeStyle) {
+        sendCodeStyle.style.display = 'block';
+      }
+    }, 13000);
   };
 
+
+  const SendCodeAgain = () => {
+    setIsSendCodeButtonDisabled(true);
+    setTimerKey((prevKey) => prevKey + 1); // Reset the timer
+
+    axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
+      .then(res => {
+        setOpen(true);
+        toast.success("Emailingizga kod yuborildi !", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+          autoClose: 7000,
+        });
+      })
+      .catch(error => {
+        setIsSendCodeButtonDisabled(false);
+        if (error.response && error.response.status >= 500) {
+          toast.error("Serverda xatolik yuz berdi !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 2000,
+          });
+        }
+        else {
+          toast.error("Bu foydalanuvchi mavjud !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 2000,
+          });
+        }
+        console.log(error);
+      });
+
+    setTimeout(() => {
+      setIsSendCodeButtonDisabled(false);
+
+    }, 10000);
+
+  }
 
 
   const handleClose = () => {
@@ -198,16 +243,18 @@ const LoginPage = () => {
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
                   Emailga borgan tekshiruv kodini kiriting
-                  
+
                   <div className="countdown-timer">
-                  <CountdownCircleTimer
-                    isPlaying
-                    duration={20}
-                    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                    colorsTime={[7, 5, 2, 0]}
-                  >
-                    {({ remainingTime }) => remainingTime}
-                  </CountdownCircleTimer>
+                    <CountdownCircleTimer
+                      key={timerKey}
+                      isPlaying
+                      duration={10}
+                      colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                      colorsTime={[7, 5, 2, 0]}
+                    >
+                      {({ remainingTime }) => remainingTime}
+                    </CountdownCircleTimer>
+                    <button className="SendCodeAgain" disabled={isSendCodeButtonDisabled} onClick={SendCodeAgain}>Kodni qayta yuborish</button>
                   </div>
 
                   <OtpInput
