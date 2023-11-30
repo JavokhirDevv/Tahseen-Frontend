@@ -5,6 +5,10 @@ import axios from "axios";
 import api_base_url from "../../configurations/Config";
 import OtpInput from 'react-otp-input';
 import { Button, DialogActions, DialogContent, DialogContentText, DialogTitle, Dialog } from "@mui/material";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -13,6 +17,9 @@ const LoginPage = () => {
     LoginEmail: "",
     LoginPassword: "",
   });
+  
+  const [isRegistrationButtonDisabled, setIsRegistrationButtonDisabled] = useState(false);
+
   const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
 
@@ -78,12 +85,19 @@ const LoginPage = () => {
     axios.post(api_base_url + "api/Registration/Register", registration)
       .then(res => {
         setOpen(false)
-        alert("User is successfully registered")
+        toast.success("Muvaffaqqiyatli ro`yhatdan o`tdingiz !", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+          autoClose: 2000,
+        });
       })
       .catch(error => {
-        alert("User is not registered")
-        setOpen(false)
-        console.log(error);
+        toast.error("Kodni xato kiritdingiz!", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+          autoClose: 2000,
+
+        });
       })
     // }
 
@@ -98,15 +112,37 @@ const LoginPage = () => {
   const handleClickOpen = () => {
     var result = axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
       .then(res => {
+        setIsRegistrationButtonDisabled(false);
         setOpen(true);
-        alert("Verification code has been sent");
+        toast.success("Emailingizga kod yuborildi !", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+          autoClose: 2000,
+        });
       })
       .catch(error => {
+        setIsRegistrationButtonDisabled(false);
+        if (error.response && error.response.status >= 500) {
+          toast.error("Serverda xatolik yuz berdi !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 2000,
+          });
+        } else {
+          toast.error("Bu foydalanuvchi mavjud !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 2000,
+          });
+        }
         console.log(error);
       });
+
     if (result === true) {
 
     }
+    setIsRegistrationButtonDisabled(true);
+
   };
 
 
@@ -116,9 +152,11 @@ const LoginPage = () => {
   };
 
 
-
   return (
+
     <div className="login_container_cover">
+      <ToastContainer className=".toast-message" />
+
       <div className="login_container" id="container">
         {/* Sign Up */}
         <div className="form-container sign-up">
@@ -139,25 +177,39 @@ const LoginPage = () => {
               </a>
             </div>
             <span>yoki o'zingizning e-mailingizdan foydalaning</span>
-            <input onChange={e => setRegistration({ ...registration, FirstName: e.target.value })} type="text" placeholder="Ism" />
-            <input onChange={e => setRegistration({ ...registration, LastName: e.target.value })} type="text" placeholder="Familiya" />
-            <input onChange={e => setRegistration({ ...registration, PhoneNumber: e.target.value })} type="text" placeholder="Telefon raqam" />
-            <input onChange={e => setRegistration({ ...registration, EmailAddress: e.target.value })} type="email" placeholder="Email manzil" />
-            <input onChange={e => setRegistration({ ...registration, Password: e.target.value })} type="password" placeholder="Parol" />
-            <button onClick={handleClickOpen}>Ro'yxatdan o'tish</button>
+            <input required onChange={e => setRegistration({ ...registration, FirstName: e.target.value })} type="text" placeholder="Ism" />
+            <input required onChange={e => setRegistration({ ...registration, LastName: e.target.value })} type="text" placeholder="Familiya" />
+            <input required onChange={e => setRegistration({ ...registration, PhoneNumber: e.target.value })} type="text" placeholder="Telefon raqam" />
+            <input required onChange={e => setRegistration({ ...registration, EmailAddress: e.target.value })} type="email" placeholder="Email manzil" />
+            <input required onChange={e => setRegistration({ ...registration, Password: e.target.value })} type="password" placeholder="Parol" />
+            <button type="submit" onClick={handleClickOpen} disabled={isRegistrationButtonDisabled}>Ro'yxatdan o'tish</button>
+
           </form>
           <React.Fragment>
 
             <Dialog
               open={open}
-              onClose={handleClose}
+              disableBackdropClick={true}
               aria-labelledby="alert-dialog-title"
               aria-describedby="alert-dialog-description"
+              className="register_dialog"
             >
               <DialogTitle id="alert-dialog-title">{""}</DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
                   Emailga borgan tekshiruv kodini kiriting
+                  
+                  <div className="countdown-timer">
+                  <CountdownCircleTimer
+                    isPlaying
+                    duration={20}
+                    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                    colorsTime={[7, 5, 2, 0]}
+                  >
+                    {({ remainingTime }) => remainingTime}
+                  </CountdownCircleTimer>
+                  </div>
+
                   <OtpInput
                     value={otp}
                     onChange={otp => {
