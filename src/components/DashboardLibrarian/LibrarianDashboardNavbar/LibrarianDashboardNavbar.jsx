@@ -1,6 +1,6 @@
 import React from "react";
 import "./LibrarianDashboardNavbar.css";
-import Tahseenlogo from "../../../assets/imgs/TahseenLogo/logo.JPG";
+import Tahseenlogo from "../../../assets/imgs/TahseenLogo/logo.png";
 import LibrarianImage from "../../../assets/imgs/AuthorImg/mYusuf.jpg";
 import { Link } from "react-router-dom";
 const LibrarianDashboardNavbar = () => {

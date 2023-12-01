@@ -16,7 +16,7 @@ const Libraries = () => {
   console.log(libraries);
   return (
     <div className="library">
-        <div className="flex items-center justify-center p-5">
+        {/* <div className="flex items-center justify-center p-5">
           <div className="rounded-lg bg-gray-200 p-3">
             <div className="flex">
               <div className="flex w-20 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-5">
@@ -41,25 +41,42 @@ const Libraries = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Qidiring" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Qidirish</button>
+        </form>
 
         <div className="library_filter">
             <h1>O`zbekistondagi ommaviy kutubxonalar</h1>
-          <select className="library_filter-select">
-            <option value="" disabled selected hidden>
-              Viloyat
-            </option>
-            <option value="non-fiction">Andijon</option>
-            <option value="non-fiction">Buxoro</option>
-            <option value="non-fiction">Toshkent</option>
-            <option value="non-fiction">Samarqand</option>
-            <option value="non-fiction">Qashqadaryo</option>
-            <option value="non-fiction">Farg`ona</option>
-            <option value="non-fiction">Namangan</option>
-            <option value="non-fiction">Xorazm</option>
-            <option value="non-fiction">Jizzax</option>
-          </select>
+            <div class="dropdown">
+              <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Viloyatlar
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Andijon</a></li>
+                <li><a class="dropdown-item" href="#">Buxoro</a></li>
+                <li><a class="dropdown-item" href="#">Toshkent</a></li>
+                <li><a class="dropdown-item" href="#">Samarqand</a></li>
+                <li><a class="dropdown-item" href="#">Qashqadaryo</a></li>
+                <li><a class="dropdown-item" href="#">Farg`ona</a></li>
+                <li><a class="dropdown-item" href="#">Namangan</a></li>
+                <li><a class="dropdown-item" href="#">Xorazm</a></li>
+                <li><a class="dropdown-item" href="#">Jizzax</a></li>
+                <li><a class="dropdown-item" href="#">Surxondaryo</a></li>
+                <li><a class="dropdown-item" href="#">Sirdaryo</a></li>
+                <li><a class="dropdown-item" href="#">Toshkent viloyati</a></li>
+              </ul>
+           </div>
         </div>
+
+        {/* <div className="library-img">
+          <img src={pic} alt="library" className="first-img"/>
+          <img src={pic} alt="library"/>
+          <img src={pic} alt="library" className="third-img"/>
+          <img src={pic} alt="library" className="fourth-img"/>
+        </div> */}
 
         <div className="library_cards_cover">
           {

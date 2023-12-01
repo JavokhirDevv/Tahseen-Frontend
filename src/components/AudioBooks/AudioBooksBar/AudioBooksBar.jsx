@@ -11,7 +11,7 @@ const AudioBooksBar = () => {
   }, [])
   return (
     <div className="audiobooksbar">
-      <div className="flex items-center justify-center p-5">
+      {/* <div className="flex items-center justify-center p-5">
         <div className="rounded-lg bg-gray-200 p-3">
           <div className="flex">
             <div className="flex w-20 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-5">
@@ -36,19 +36,57 @@ const AudioBooksBar = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Qidiring" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Qidirish</button>
+      </form>
 
       <div className="audiobooksbar_filter">
-        <select className="audiobooksbar_filter-select">
+        {/* <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Til
           </option>
           <option value="non-fiction">O`zbek</option>
           <option value="non-fiction">Rus</option>
           <option value="non-fiction">Ingliz</option>
-        </select>
+        </select> */}
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Suxandonlar
+          </a>
 
-        <select className="audiobooksbar_filter-select">
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Mualliflar
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Muhammadkarim To'xtaboyev</a></li>
+            <li><a class="dropdown-item" href="#">G'ulomov Javohirbek</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+            <li><a class="dropdown-item" href="#">Muhammadkarim To'xtaboyev</a></li>
+            <li><a class="dropdown-item" href="#">G'ulomov Javohirbek</a></li>
+            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
+          </ul>
+        </div>
+
+        {/* <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Mualliflar
           </option>
@@ -59,15 +97,27 @@ const AudioBooksBar = () => {
               )
             })
           }
-        </select>
+        </select> */}
 
-        <select className="audiobooksbar_filter-select">
+        {/* <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Suxandonlar
-          </option>
+          </option> */}
           {/* Map */}
           {/* <option value="non-fiction">Arab Tili</option> */}
-        </select>
+        {/* </select> */}
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Til
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">O'zbek tili</a></li>
+            <li><a class="dropdown-item" href="#">Arab tili</a></li>
+            <li><a class="dropdown-item" href="#">Ingliz tili</a></li>
+            <li><a class="dropdown-item" href="#">Rus tili</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   );

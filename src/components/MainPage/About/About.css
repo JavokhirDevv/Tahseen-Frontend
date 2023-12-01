@@ -12,14 +12,17 @@
 }
 .about h1{
     text-align: center;
-    color: #0293FC;
+    /* color: #0293FC; */
+    background: radial-gradient(#0293FC, #2c2c2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 500;
     font-size: 25px;
     text-transform: uppercase;
 
 }
 .about h2{
-    color: orangered;
+    color: #0293FC;
     margin-top: 10px;
     font-weight: 500;
 

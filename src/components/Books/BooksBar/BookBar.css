@@ -1,22 +1,50 @@
-.bookbar .rounded-lg{
-    max-width: 600px;
-    width: 100%;
-
-}
 .bookbar {
     max-width: 1440px;
     width: 100%;
-    /* border: 1px solid black; */
     margin: auto;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/imgs/banner/background-5.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
+.d-flex {
+    padding: 50px 500px;
+}
+
+.form-control {
+    /* max-width: 100%; */
+    width: 1000px;
+    border: 1px solid grey;
+}
+
+.btn {
+    color: #000;
+    border: 1px solid #000;
+    width: 250px;
+    &:hover {
+        background-color: #0293FC;
+    }
+    &:focus {
+        border: 1px solid #0293FC;
+        color: #000;
+    }
+}
+
+.dropdown .dropdown-toggle {
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    &:hover {
+        color: #000;
+        border-color: #000;
+    }
+}
 
 .bookbar_filter{
     max-width: 1440px;
     width: 100%;
-    height: 100px;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -49,18 +77,18 @@
 }
 
 /* Remove default arrow in Firefox */
-.bookbar_filter-select::-moz-focus-inner {
+/* .bookbar_filter-select::-moz-focus-inner {
     border: 0;
-}
+} */
 
 /* Remove default arrow in IE 10+ */
-.bookbar_filter-select::-ms-expand {
+/* .bookbar_filter-select::-ms-expand {
     display: none;
-}
+} */
 
 /* Style the select arrow for Webkit browsers */
-.bookbar_filter-select::-webkit-select-arrow {
+/* .bookbar_filter-select::-webkit-select-arrow {
     color: #0293FC;
     font-size: 14px;
-}
+} */
 

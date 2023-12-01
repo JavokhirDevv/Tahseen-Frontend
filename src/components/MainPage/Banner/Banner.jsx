@@ -11,8 +11,8 @@ const Banner = () => {
   return (
     <div className='banner'>
         <div className="banner_left_side">
-            <h3>Tahseen - Barcha kitobxonlar uchun onlayn kutubxona</h3>
-            <h1>"Ilm ila najot sari"</h1>
+            <h3>Tahseen - barcha kitobxonlar uchun onlayn kutubxona</h3>
+            {/* <h1>"Ilm ila najot sari"</h1> */}
         </div>
         <div className='library_logo'>
             <img src={library} alt="" />

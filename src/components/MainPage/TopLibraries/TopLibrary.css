@@ -1,23 +1,24 @@
 .top_library {
   max-width: 1440px;
   width: 100%;
-  height: auto;
+  height: 800px;
   margin: auto;
   padding: 20px 30px;
-  /* border: 1px solid black; */
-
-
+  border: 1px solid #fff;
 }
 
 .top_library h1 {
   text-align: center;
   margin: 10px 0px;
-  color: #0293FC;
   font-family: 'Red Hat Display', sans-serif;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
+  background: linear-gradient(#0293FC, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  /* color: #0293FC; */
 }
 
 .top_library_slider {
@@ -25,5 +26,4 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
 }

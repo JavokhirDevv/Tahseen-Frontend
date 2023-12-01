@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import axios from "axios";
 import api_base_url from "../../../configurations/Config";
+import book from '../../../assets/imgs/BookCard/Otkan kunlar.webp'
 // Remove the import for booksMockData, as it's not needed
 
 const TopBooks = () => {
@@ -41,6 +42,7 @@ const TopBooks = () => {
         </Swiper>
         
       </div>
+
     </div>
   );
 };
