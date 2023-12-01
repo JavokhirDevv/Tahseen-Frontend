@@ -9,39 +9,25 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
-
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [registration, setRegistration] = useState({ FirstName: "", LastName: "", PhoneNumber: "", EmailAddress: "", Password: "", VerificationCode: "" })
+  const [registration, setRegistration] = useState({
+    FirstName: "",
+    LastName: "",
+    PhoneNumber: "",
+    EmailAddress: "",
+    Password: "",
+    VerificationCode: ""
+  });
   const [login, setLogin] = useState({
     LoginEmail: "",
     LoginPassword: "",
   });
   const [timerKey, setTimerKey] = useState(0); // Key to reset the countdown timer
-
   const [isRegistrationButtonDisabled, setIsRegistrationButtonDisabled] = useState(false);
   const [isSendCodeButtonDisabled, setIsSendCodeButtonDisabled] = useState(false);
-
   const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
-
-  const GetLoginInfo = (e) => {
-    setLogin({ ...login, [e.target.name]: e.target.value });
-  };
-
-  const CheckAuth = (e) => {
-    e.preventDefault();
-    var errorMessage = document.querySelector(".error_message");
-    if (
-      login.LoginEmail === "hello@gmail.com" &&
-      login.LoginPassword === "222"
-    ) {
-      navigate("/bosh-sahifa");
-    } else {
-      errorMessage.style.display = "block";
-    }
-  };
-
 
   useEffect(() => {
     const container = document.getElementById("container");
@@ -73,139 +59,181 @@ const LoginPage = () => {
     };
   }, []);
 
+  const GetLoginInfo = (e) => {
+    setLogin({ ...login, [e.target.name]: e.target.value });
+  };
+
+  const CheckAuth = (e) => {
+    e.preventDefault();
+    var errorMessage = document.querySelector(".error_message");
+    if (
+      login.LoginEmail !== "hello@gmail.com" &&
+      login.LoginPassword !== "222"
+    ) {
+      navigate("/bosh-sahifa");
+    } else {
+      errorMessage.style.display = "block";
+    }
+  };
+
+  const validateRegistration = () => {
+    const {
+      FirstName,
+      LastName,
+      PhoneNumber,
+      EmailAddress,
+      Password
+    } = registration;
+
+    if (
+      FirstName.trim() &&
+      LastName.trim() &&
+      PhoneNumber.trim() &&
+      EmailAddress.trim() &&
+      Password.trim()
+    ) {
+      return true;
+    }
+    return false;
+  };
 
   function RegisterUser() {
-    // var IsVerified = axios.post(api_base_url + "api/Registration/register", {Email: registration.EmailAddress, VerificationCode: otp})
-    //   .then(res => {
-    //     alert("User is verified")
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   })
-
-    // if (IsVerified == true) {
-    axios.post(api_base_url + "api/Registration/Register", registration)
-      .then(res => {
-        setOpen(false)
-        toast.success("Muvaffaqqiyatli ro`yhatdan o`tdingiz !", {
-          position: toast.POSITION.TOP_RIGHT,
-          className: "toast-message",
-          autoClose: 2000,
-        });
-      })
-      .catch(error => {
-        toast.error("Kodni xato kiritdingiz!", {
-          position: toast.POSITION.TOP_RIGHT,
-          className: "toast-message",
-          autoClose: 2000,
-
-        });
-      })
-    // }
-
-  }
-
-  function EventFalse(event) {
-    event.preventDefault()
-  }
-
-
-
-  const handleClickOpen = () => {
-    setIsRegistrationButtonDisabled(true);
-
-    axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
-      .then(res => {
-        setIsRegistrationButtonDisabled(false);
-        setOpen(true);
-        toast.success("Emailingizga kod yuborildi !", {
-          position: toast.POSITION.TOP_RIGHT,
-          className: "toast-message",
-          autoClose: 2000,
-        });
-      })
-      .catch(error => {
-        setIsRegistrationButtonDisabled(false);
-        if (error.response && error.response.status >= 500) {
-          toast.error("Serverda xatolik yuz berdi !", {
+    if (validateRegistration()) {
+      axios.post(api_base_url + "api/Registration/Register", registration)
+        .then(res => {
+          setOpen(false)
+          toast.success("Muvaffaqqiyatli ro`yhatdan o`tdingiz !", {
             position: toast.POSITION.TOP_RIGHT,
             className: "toast-message",
             autoClose: 2000,
           });
-        } else {
-          toast.error("Bu foydalanuvchi mavjud !", {
+        })
+        .catch(error => {
+          toast.error("Kodni xato kiritdingiz!", {
             position: toast.POSITION.TOP_RIGHT,
             className: "toast-message",
             autoClose: 2000,
           });
-        }
-        console.log(error);
+        });
+    } else {
+      toast.error("Barcha malumotlarni to`liq kiriting !", {
+        position: toast.POSITION.TOP_RIGHT,
+        className: "toast-message",
+        autoClose: 2000,
       });
 
+    }
+  }
 
-    setTimeout(() => {
-      let sendCodeStyle = document.querySelector(".SendCodeAgain");
-      if (sendCodeStyle) {
-        sendCodeStyle.style.display = 'block';
-      }
-    }, 13000);
+  const handleClickOpen = () => {
+    setIsRegistrationButtonDisabled(false);
+
+    if (!validateRegistration()) { // Negate the condition
+      toast.error("Barcha malumotlarni to`liq kiriting !", {
+        position: toast.POSITION.TOP_RIGHT,
+        className: "toast-message",
+        autoClose: 2000,
+      });
+      setIsRegistrationButtonDisabled(false); // Move this line inside the else block
+    } else {
+      axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
+        .then(res => {
+          setIsRegistrationButtonDisabled(false);
+          setOpen(true);
+          toast.success("Emailingizga kod yuborildi !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 2000,
+          });
+        })
+        .catch(error => {
+          setIsSendCodeButtonDisabled(false);
+          if (error.response && error.response.status >= 500 && error.response && error.response.status <= 400 ) {
+            toast.error("xatolik yuz berdi !", {
+              position: toast.POSITION.TOP_RIGHT,
+              className: "toast-message",
+              autoClose: 2000,
+            })
+          }
+          else if (error.response && error.response.status >= 400 && error.response && error.response.status < 500) {
+            toast.error("Bu foydalanuvchi mavjud !", {
+              position: toast.POSITION.TOP_RIGHT,
+              className: "toast-message",
+              autoClose: 2000,
+            });
+          }
+       
+          console.log(error);
+        });
+
+      setTimeout(() => {
+        let sendCodeStyle = document.querySelector(".SendCodeAgain");
+        if (sendCodeStyle) {
+          sendCodeStyle.style.display = 'block';
+        }
+      }, 13000);
+    }
   };
 
 
-  const SendCodeAgain = () => {
+  const SendCodeAgain = (event) => {
     setIsSendCodeButtonDisabled(true);
     setTimerKey((prevKey) => prevKey + 1); // Reset the timer
 
-    axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
-      .then(res => {
-        setOpen(true);
-        toast.success("Emailingizga kod yuborildi !", {
-          position: toast.POSITION.TOP_RIGHT,
-          className: "toast-message",
-          autoClose: 7000,
+    if (validateRegistration()) {
+      axios.post(api_base_url + "api/Registration/SendVerificationCode", { Email: registration.EmailAddress }, { headers: { 'Content-Type': 'application/json' } })
+        .then(res => {
+          setOpen(true);
+          toast.success("Emailingizga kod yuborildi !", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: "toast-message",
+            autoClose: 7000,
+          });
+        })
+        .catch(error => {
+          setIsSendCodeButtonDisabled(false);
+          if (error.response && error.response.status >= 500 && error.response && error.response.status <= 400 ) {
+            toast.error("xatolik yuz berdi !", {
+              position: toast.POSITION.TOP_RIGHT,
+              className: "toast-message",
+              autoClose: 2000,
+            })
+          }
+          else if (error.response && error.response.status >= 400 && error.response && error.response.status < 500) {
+            toast.error("Bu foydalanuvchi mavjud !", {
+              position: toast.POSITION.TOP_RIGHT,
+              className: "toast-message",
+              autoClose: 2000,
+            });
+          }
+          console.log(error);
         });
-      })
-      .catch(error => {
+
+
+      setTimeout(() => {
         setIsSendCodeButtonDisabled(false);
-        if (error.response && error.response.status >= 500) {
-          toast.error("Serverda xatolik yuz berdi !", {
-            position: toast.POSITION.TOP_RIGHT,
-            className: "toast-message",
-            autoClose: 2000,
-          });
-        }
-        else {
-          toast.error("Bu foydalanuvchi mavjud !", {
-            position: toast.POSITION.TOP_RIGHT,
-            className: "toast-message",
-            autoClose: 2000,
-          });
-        }
-        console.log(error);
+
+      }, 10000);
+    } else {
+      toast.error("Barcha malumotlarni to`liq kiriting !", {
+        position: toast.POSITION.TOP_RIGHT,
+        className: "toast-message",
+        autoClose: 2000,
       });
-
-    setTimeout(() => {
-      setIsSendCodeButtonDisabled(false);
-
-    }, 10000);
-
+    }
   }
-
 
   const handleClose = () => {
     setOpen(false);
   };
 
-
   return (
-
     <div className="login_container_cover">
       <ToastContainer className=".toast-message" />
-
       <div className="login_container" id="container">
         {/* Sign Up */}
         <div className="form-container sign-up">
-          <form onSubmit={EventFalse}>
+          <form onSubmit={(e) => e.preventDefault()}>
             <h1>Ro`yhatdan o`tish</h1>
             <div className="social-icons">
               <a href="#" className="icon">
@@ -228,10 +256,9 @@ const LoginPage = () => {
             <input required onChange={e => setRegistration({ ...registration, EmailAddress: e.target.value })} type="email" placeholder="Email manzil" />
             <input required onChange={e => setRegistration({ ...registration, Password: e.target.value })} type="password" placeholder="Parol" />
             <button type="submit" onClick={handleClickOpen} disabled={isRegistrationButtonDisabled}>Ro'yxatdan o'tish</button>
-
           </form>
-          <React.Fragment>
 
+          <React.Fragment>
             <Dialog
               open={open}
               disableBackdropClick={true}
@@ -248,7 +275,7 @@ const LoginPage = () => {
                     <CountdownCircleTimer
                       key={timerKey}
                       isPlaying
-                      duration={10}
+                      duration={20}
                       colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                       colorsTime={[7, 5, 2, 0]}
                     >
@@ -283,8 +310,6 @@ const LoginPage = () => {
                       />
                     )}
                   />
-
-
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
@@ -294,28 +319,9 @@ const LoginPage = () => {
                 </Button>
               </DialogActions>
             </Dialog>
-
           </React.Fragment>
         </div>
         {/* Sign Up */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {/* Login */}
         <div className="form-container sign-in">
           <form>
@@ -352,9 +358,7 @@ const LoginPage = () => {
             <button onClick={CheckAuth}>Kirish</button>
           </form>
         </div>
-
         {/* Login */}
-
         <div className="toggle-container">
           <div className="toggle">
             <div className="toggle-panel toggle-left">
