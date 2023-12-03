@@ -19,16 +19,18 @@ const LoginPage = () => {
     Password: "",
     VerificationCode: ""
   });
-  const [login, setLogin] = useState({
-    LoginEmail: "",
-    LoginPassword: "",
-  });
+
+  const [login, setLogin] = useState({PhoneNumber: "", Password: ""});
   const [timerKey, setTimerKey] = useState(0); // Key to reset the countdown timer
   const [isRegistrationButtonDisabled, setIsRegistrationButtonDisabled] = useState(false);
   const [isSendCodeButtonDisabled, setIsSendCodeButtonDisabled] = useState(false);
   const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
 
+  console.log(login);
+  console.log(login.Password);
+
+  //Frontend swiper from login to sign up
   useEffect(() => {
     const container = document.getElementById("container");
     const registerBtn = document.getElementById("register");
@@ -58,10 +60,6 @@ const LoginPage = () => {
       }
     };
   }, []);
-
-  const GetLoginInfo = (e) => {
-    setLogin({ ...login, [e.target.name]: e.target.value });
-  };
 
   const CheckAuth = (e) => {
     e.preventDefault();
@@ -175,7 +173,6 @@ const LoginPage = () => {
     }
   };
 
-
   const SendCodeAgain = (event) => {
     setIsSendCodeButtonDisabled(true);
     setTimerKey((prevKey) => prevKey + 1); // Reset the timer
@@ -229,25 +226,19 @@ const LoginPage = () => {
 
   return (
     <div className="login_container_cover">
+      
       <ToastContainer className=".toast-message" />
-      <div className="login_container" id="container">
-        {/* Sign Up */}
+      
+      <div className="login_container" id="container">z
+        {/* Sign Up started*/}
         <div className="form-container sign-up">
           <form onSubmit={(e) => e.preventDefault()}>
             <h1>Ro`yhatdan o`tish</h1>
             <div className="social-icons">
-              <a href="#" className="icon">
-                <i className="fa-brands fa-google-plus-g"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fa-brands fa-facebook-f"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fa-brands fa-github"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
+              <a href="#" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
+              <a href="#" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="#" className="icon"><i className="fa-brands fa-github"></i></a>
+              <a href="#" className="icon"><i className="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>yoki o'zingizning e-mailingizdan foydalaning</span>
             <input required onChange={e => setRegistration({ ...registration, FirstName: e.target.value })} type="text" placeholder="Ism" />
@@ -321,8 +312,9 @@ const LoginPage = () => {
             </Dialog>
           </React.Fragment>
         </div>
-        {/* Sign Up */}
-        {/* Login */}
+        {/* Sign Up ended*/}
+       
+        {/* Login started*/}
         <div className="form-container sign-in">
           <form>
             <h1>Kirish</h1>
@@ -342,20 +334,20 @@ const LoginPage = () => {
             </div>
             <span>yoki o'zingizning e-mailingizdan foydalaning</span>
             <input
-              name="LoginEmail"
-              onChange={GetLoginInfo}
-              type="email"
+              name="PhoneNumber"
+              onChange={e => setLogin({...login, PhoneNumber: e.target.value})}
+              type="number"
               placeholder="Telefon Raqam"
             />
             <input
               name="LoginPassword"
-              onChange={GetLoginInfo}
+              onChange={e => setLogin({...login, Password: e.target.value})}
               type="password"
               placeholder="Parol"
             />
             <h3 className="error_message">Email yoki parol noto`g`ri</h3>
             <a href="#">Parolni unutdingizmi?</a>
-            <button onClick={CheckAuth}>Kirish</button>
+            <button>Kirish</button>
           </form>
         </div>
         {/* Login */}

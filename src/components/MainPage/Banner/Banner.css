@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url('/src/assets/imgs/banner/background-5.webp');
+    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
     background-repeat: no-repeat;
     background-size:contain;
     margin-top: 1rem;

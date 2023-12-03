@@ -31,7 +31,7 @@ const AudioBookPage = () => {
     <div className="audio_book_page">
       <AudioBookPageHeader audioBook={audioBook} />
       {audioBook.audioFiles.map((value) => (
-        <audio key={value.id} src={api_base_url+value.filePath} controls className="audio_book_player"></audio>
+        <audio key={value.id} controls src={api_base_url+value.filePath} className="audio_book_player"></audio>
       ))}
     </div>
   );
