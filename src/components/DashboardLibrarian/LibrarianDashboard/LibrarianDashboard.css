@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-top: 1rem;
 }
 
 
@@ -31,11 +32,12 @@
 }
 .librarian_dashboard_main_side h1{
     font-size: 30px;
-    color: black;
+    color: #0293FC;
 
 }
 .librarian_dashboard_main_side h5{
     font-weight: 400;
+    font-size: 20px;
 }
 .library_dashboard_libray_page_change{
     max-width: 1300px;
@@ -47,8 +49,8 @@
     width: 100%;
     margin: 20px auto;
     border-radius: 20px;
-    background: white;
     padding: 10px 15px;
     overflow: hidden;
-    border: 1px solid red;
+    color: #000;
+    /* background: white; */
 }
