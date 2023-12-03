@@ -15,11 +15,11 @@ const BooksCover = () => {
       </div>
       <div className="pagination_cover">
         <div className="pagination">
-          <button className="prev-btn">&laquo; Previous</button>
+          <button className="prev-btn">&laquo; Oldingisi</button>
           <button className="page-btn active">1</button>
           <button className="page-btn">2</button>
           <button className="page-btn">3</button>
-          <button className="next-btn">Next &raquo;</button>
+          <button className="next-btn">Keyingisi &raquo;</button>
         </div>
       </div>
     </div>

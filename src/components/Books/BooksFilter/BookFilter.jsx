@@ -93,53 +93,6 @@ const BookFilter = () => {
       <div className="book_sorting">
         <h1>Mualliflar</h1>
 
-        {/* <div className="book_sorting_filter_cover">
-        
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Aliser Navoiy</h6>
-        </div>
-
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Zahiriddin Muhammad Bobur</h6>
-
-        </div>
-        
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Abdulla Qodiriy</h6>
-        </div>
-
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Oybek</h6>
-        </div>
-
-                
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Aliser Navoiy</h6>
-        </div>
-
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Zahiriddin Muhammad Bobur</h6>
-
-        </div>
-        
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Abdulla Qodiriy</h6>
-        </div>
-
-        <div className="genre_cover">
-            <input type="checkbox"/>
-            <h6>Oybek</h6>
-        </div>
-
-   
-        </div> */}
         <div className="book_sorting_filter_cover">
         <div className="genre_cover">
         <div class="form-check">
@@ -204,10 +157,66 @@ const BookFilter = () => {
               G'ofur G'ulom
             </label>
         </div>
-
-        </div>
-        </div>
       </div>
+    </div>
+</div>
+
+<div className="book_sorting">
+        <h1>Davrlar</h1>
+
+        <div className="book_sorting_filter_cover">
+        <div className="genre_cover">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Tarixiy
+            </label>
+        </div>
+        <br/>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Birinchi jahon urushi davri
+            </label>
+        </div>
+        <br/>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Ikkinchi jahon urushi davri
+            </label>
+        </div>
+        <br/>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Mustaqillik davri
+            </label>
+        </div>
+        <br/>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+               Zamonaviy davr
+            </label>
+        </div>
+        <br/>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Renessans davri
+            </label>
+        </div>
+        <br/>
+      </div>
+    </div>
+</div>
+
     </div>
   );
 };

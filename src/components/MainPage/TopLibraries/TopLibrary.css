@@ -1,15 +1,14 @@
 .top_library {
   max-width: 1440px;
   width: 100%;
-  height: 800px;
   margin: auto;
-  padding: 20px 30px;
-  border: 1px solid #fff;
+  padding: 0 30px;
+  /* border: 1px solid #fff; */
 }
 
 .top_library h1 {
   text-align: center;
-  margin: 10px 0px;
+  margin: 20px 0px;
   font-family: 'Red Hat Display', sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -24,6 +23,8 @@
 .top_library_slider {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 40px;
 }

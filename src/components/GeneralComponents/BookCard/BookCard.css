@@ -2,23 +2,22 @@
     max-width: 320px;
     width: 100%;
     height: 470px;
-    border: 1px solid #f2f2f2;
+    border: 1px solid #0293FC;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    background-color: #ffffff;
+    background-color: #000;
     border-radius: 12px;
-    cursor: pointer;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    /* box-shadow: 0px 0px 10px #0293FC(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;  */
 }
-
+/* 
 .bookcard:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px 4px #0293FC(65,65,65,.8); 
     cursor: pointer;
-}
+} */
 
 .bookcard .book_image_cover {
     max-width: 330px;
@@ -31,7 +30,8 @@
     margin: 0px auto;
     overflow: hidden;
     margin-bottom: 5px;
-    /* border: 1px solid black; */
+    /* border: 1px solid #fff; */
+    /* border-color:#0293FC; */
 }
 
 .bookcard .book_image_cover img{
@@ -47,9 +47,9 @@
 
 .bookcard .book_card_icons .fa-bookmark{
     color: #C2C6D1;
-    max-width: 45px;
+    max-width: 35px;
     width: 100%;
-    height: 45px;
+    height: 35px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -57,25 +57,27 @@
     color: #0293FC;
     border-radius: 50%;
     font-size: 25px;
+    cursor: pointer;
 }
 .book_card_icons{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5px;
 }
-
 
 .bookcard h3 {
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #555;
+    color: #fff;
     font-size: 14px;
     margin-top: 5px;
     font-family: 'Poppins', sans-serif;
 }
 .bookcard h3 font {
-    color: #393280;
+    color: #0293FC;
+    text-decoration: underline;
     font-weight: 500;
 }
 .bookcard h4 {
@@ -107,14 +109,18 @@
     width: 100%;
     height: 35px;
     text-align: center;
-    background-color: white;
+    background-color: #0293FC;
     border: 1px solid #0293FC;
     text-align: center;
-    color: #0293FC;
+    color: #fff;
     border-radius: 10px;
-    transition: all 0.2s;
+    transition: all 0.3s;
     font-family: 'Poppins', sans-serif;
 
+}
+
+.bookcard button:hover{
+    scale: 1.05;
 }
 
 .bookcard button:active{
@@ -122,17 +128,15 @@
     width: 100%;
     height: 35px;
     text-align: center;
-    background-color: white;
-    border: 1px solid #0293FC;
-    text-align: center;
-    color: #0293FC;
     border-radius: 10px;
-    margin-top: 10px;
     scale: 1.03;
+    /* background-color: white; */
+    /* margin-top: 10px; */
 }
 .bookcard button:hover{
     background-color: #0293FC;
     color: white;
+    cursor: pointer;
 }
 .bookcard_button_cover{
     max-width: 150px;

@@ -23,9 +23,9 @@
     font-family: "Poppins", sans-serif;
     padding: 20px;
     box-sizing: border-box;
-    background: #F5F7FA;
+    background: linear-gradient(to bottom, #000, #161616);
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
     margin-left: 10px;
 
 }

@@ -37,6 +37,7 @@ const BookCard = ({ value }) => {
           <button>Ko`proq</button>
         </Link>
       </div>
+      
     </div>
   );
 };

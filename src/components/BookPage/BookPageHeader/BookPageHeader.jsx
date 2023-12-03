@@ -59,7 +59,7 @@ const BookPageHeader = ({ bookHeader }) => {
           <div className="book_header_title_img_name">
             {publisher && <img src={`${api_base_url}${publisher.image}`} />}
             <div className="book_header_title">
-              <h6>Nashiriyot</h6>
+              <h6>Nashriyot</h6>
               <h4>{publisher && publisher.name}</h4>
             </div>
           </div>

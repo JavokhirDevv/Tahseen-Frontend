@@ -3,11 +3,13 @@
     width: 100%;
     height: auto;
     margin: auto;
-    /* border: 1px solid black; */
     display: flex;
+    padding-top: 1rem;
     justify-content: flex-start;
     align-items: flex-start;
     font-family: 'Red Hat Display', sans-serif;
+    background: linear-gradient(to bottom, #000, #161616);
+    /* border: 1px solid black; */
 
 }
 
@@ -15,7 +17,8 @@
     max-width: 510px;
     width: 100%;
     height: 530px;
-    /* border: 1px solid black; */
+    border: 1px solid #0293FC;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,16 +33,16 @@
 .author_page_content {
     max-width: 800px;
     width: 100%;
-    height: auto;
-    /* border: 1px solid black; */
     padding: 0px 20px;
     margin-top: 30px;
+    /* border: 1px solid black; */
 }
 
 .author_page_name {
     font-size: 33px;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 400;
+    color: #fff;
 }
 
 .author_page_content span {
@@ -54,7 +57,7 @@
 .author_page_content span strong {
     margin-left: 8px;
     font-size: 18px;
-    color: black;
+    color: #fff;
     font-family: 'Red Hat Display', sans-serif;
 
 }
@@ -78,7 +81,7 @@
 
 .author_page_content p {
     font-size: 13px;
-    color: rgb(60, 60, 60);
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-top: 8px;
@@ -86,27 +89,27 @@
 }
 
 .author_page_hr {
-    border: 1px solid rgb(120, 120, 120);
+    border: 1px solid #fff;
 }
 
 .author_page_bottom_side {
     max-width: 800px;
     width: 100%;
     height: 100px;
-    /* border: 1px solid black; */
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid black; */
 }
 
 .author_page_title_img_name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* border: 1px solid black; */
     max-width: 200px;
     width: 100%;
+    /* border: 1px solid black; */
 }
 
 .author_page_title {
@@ -142,33 +145,26 @@
 
 }
 
-.author_page_available .fa-circle-check {
+/* .author_page_available .fa-circle-check {
     color: #0293FC;
     margin-right: 10px;
-}
+} */
 
 
 .author_page_save {
-    max-width: 100px;
+    max-width: 150px;
     width: 100%;
     height: 40px;
-    border: 1px solid #0293FC;
+    background-color: #0293FC;
+    color: #fff;
     border-radius: 10px;
     text-align: center;
-    transition: all 0.3s;
 }
 
 .author_page_save:active {
-    max-width: 100px;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #0293FC;
-    border-radius: 10px;
-    text-align: center;
-    scale: 1.03;
+    scale: 1.05;
 }
 
 .author_page_save:hover {
-    background: #0293FC;
-    color: white;
+    scale: 1.05;
 }

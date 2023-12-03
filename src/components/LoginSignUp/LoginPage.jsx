@@ -234,7 +234,7 @@ const LoginPage = () => {
         {/* Sign Up */}
         <div className="form-container sign-up">
           <form onSubmit={(e) => e.preventDefault()}>
-            <h1>Ro`yhatdan o`tish</h1>
+            <h1>Ro'yxatdan o'tish</h1>
             <div className="social-icons">
               <a href="#" className="icon">
                 <i className="fa-brands fa-google-plus-g"></i>
@@ -345,7 +345,7 @@ const LoginPage = () => {
               name="LoginEmail"
               onChange={GetLoginInfo}
               type="email"
-              placeholder="Telefon Raqam"
+              placeholder="Telefon raqam"
             />
             <input
               name="LoginPassword"
