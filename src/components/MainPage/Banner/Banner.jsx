@@ -6,7 +6,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination} from 'swiper/modules';
 import './Banner.css'
-import library from '../../../assets/imgs/banner/library.png'
+// import library from '../../../assets/imgs/banner/library.png'
+import books from '../../../assets/imgs/banner/book_PNG51067.png'
+
 const Banner = () => {
   return (
     <div className='banner'>
@@ -15,7 +17,7 @@ const Banner = () => {
             {/* <h1>"Ilm ila najot sari"</h1> */}
         </div>
         <div className='library_logo'>
-            <img src={library} alt="" />
+            <img src={books} alt="" />
         </div>
     </div>
   )

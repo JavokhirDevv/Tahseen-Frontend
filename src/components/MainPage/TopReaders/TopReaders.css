@@ -3,7 +3,8 @@
   width: 100%;
   height: auto;
   margin: auto;
-  padding: 20px 30px;
+  padding: 40px 30px;
+  /* margin-top: 20px; */
 }
 
 .topreader h1 {
@@ -24,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 40px;
 }
 
 .topreader_slider .user-card-wrapper {

@@ -35,7 +35,7 @@ useEffect(() => {
       <div className="details_and_related_books_cover">
         {<BookPageDetails bookDetails={books} />} 
         <div className="related_books">
-          <h1>Muallifga tegishli kitoblar ro`yhati</h1>
+          <h1>Muallifga tegishli kitoblar:</h1>
           <div className="relatedbookcards">
             <RelatedBookCard />
             <RelatedBookCard />

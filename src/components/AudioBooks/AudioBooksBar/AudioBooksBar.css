@@ -1,33 +1,30 @@
-.audiobooksbar .rounded-lg{
-    max-width: 600px;
-    width: 100%;
-
-}
 .audiobooksbar {
     max-width: 1440px;
     width: 100%;
-    /* border: 1px solid black; */
     margin: auto;
+    background-image: url('/src/assets/imgs/banner/background-5.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid #fff; */
 
 }
 
 .audiobooksbar_filter{
     max-width: 1440px;
     width: 100%;
-    height: 100px;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /* border: 1px solid #fff; */
 
 }
 /* Style the select box */
-.audiobooksbar_filter-select {
+/* .audiobooksbar_filter-select {
     padding: 12px 20px;
     font-size: 16px;
     border: 2px solid #0293FC;
     border-radius: 15px;
-    color: black;
+    color: #fff;
     background-color: white;
     cursor: pointer;
     outline: none;
@@ -35,31 +32,31 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-}
+} */
 
 /* Style the select options */
-.audiobooksbar_filter-select option {
+/* .audiobooksbar_filter-select option {
     padding: 12px 20px;
     font-size: 16px;
     color: black;
     background-color: white;
     cursor: pointer;
     outline: none;
-}
+} */
 
 /* Remove default arrow in Firefox */
-.audiobooksbar_filter-select::-moz-focus-inner {
+/* .audiobooksbar_filter-select::-moz-focus-inner {
     border: 0;
-}
+} */
 
 /* Remove default arrow in IE 10+ */
-.audiobooksbar_filter-select::-ms-expand {
+/* .audiobooksbar_filter-select::-ms-expand {
     display: none;
-}
+} */
 
 /* Style the select arrow for Webkit browsers */
-.audiobooksbar_filter-select::-webkit-select-arrow {
+/* .audiobooksbar_filter-select::-webkit-select-arrow {
     color: #0293FC;
     font-size: 14px;
-}
+} */
 

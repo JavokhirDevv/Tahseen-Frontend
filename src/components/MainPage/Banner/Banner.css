@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
+    background-image: url('/src/assets/imgs/banner/background-5.webp');
     background-repeat: no-repeat;
     background-size:contain;
     margin-top: 1rem;
@@ -66,7 +66,7 @@
 } */
 
 .library_logo img{
-    max-width: 600px;
+    max-width: 580px;
     width: 100%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }

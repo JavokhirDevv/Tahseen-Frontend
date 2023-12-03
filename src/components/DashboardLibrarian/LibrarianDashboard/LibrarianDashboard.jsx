@@ -74,7 +74,7 @@ const LibrarianDashboard = () => {
       <div className="librarian_dashboard_sidebar_datalist_container">
         <LibrarianDashboardSideBar />
         <div className="librarian_dashboard_main_side">
-          <h1>Assalomu alekum John</h1>
+          <h1>Assalomu alaykum Javohirbek !</h1>
           <h5>{currentDate}</h5>
          
           <div className="library_dashboard_libray_page_change">

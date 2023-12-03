@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 20px;
 }
 
 .book_sorting {
@@ -20,7 +21,6 @@
   background-image: url('/src/assets/imgs/banner/background-5.webp');
     background-repeat: repeat;
     background-size: cover;
-  /* border: 1px solid red; */
 
 }
 

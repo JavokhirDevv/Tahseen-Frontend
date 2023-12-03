@@ -35,7 +35,7 @@ const TopBooks = () => {
           className="mySwiper"
         >
           {books.map((value) => (
-            <SwiperSlide key={value.id}>
+            <SwiperSlide key={value.id} className="swiper-slide">
               <BookCard value={value} />
             </SwiperSlide>
           ))}

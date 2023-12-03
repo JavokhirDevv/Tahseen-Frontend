@@ -27,7 +27,7 @@ const LoginPage = () => {
   const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
 
-  console.log(login);
+  console.log(login.Password);
   console.log(login.Password);
 
   //Frontend swiper from login to sign up

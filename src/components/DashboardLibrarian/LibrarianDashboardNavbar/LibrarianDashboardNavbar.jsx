@@ -9,9 +9,13 @@ const LibrarianDashboardNavbar = () => {
       <Link to={"/bosh-sahifa"}>
         <img src={Tahseenlogo} alt="" />
       </Link>
+
+      
       <form>
         <input type="search" placeholder="Qidirish" />
       </form>
+      <button class="btn btn-outline-success" type="submit">Qidirish</button>
+      
 
       <div className="librarian_navbar_text_cover">
         <i class="fa-regular fa-bell"></i>
