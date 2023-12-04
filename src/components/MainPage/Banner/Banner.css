@@ -56,9 +56,6 @@
 .banner_left_side h3{
     color: #0293FC;
     font-size: 45px;
-    background: linear-gradient(#0293FC, #eee);
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 /* .banner_left_side h1{
     color: #0293FC;

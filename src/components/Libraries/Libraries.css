@@ -1,111 +1,39 @@
 .library {
     max-width: 1440px;
     width: 100%;
+    border: 1px solid black;
     margin: auto;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* border: 1px solid black; */
 }
-/* .library .rounded-lg{
+.library .rounded-lg{
     max-width: 600px;
     width: 100%;
-} */
-
-.d-flex {
-    padding: 50px 500px;
-    font-family: 'Poppins', sans-serif;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp');
-    background-repeat: repeat;
-    background-size:cover; */
-}
-
-.form-control {
-    width: 1000px;
-    border: 1px solid grey;
-    /* max-width: 100%; */
-}
-
-.btn {
-    color: #fff;
-    border: 1px solid #000;
-    width: 250px;
-    background-color: #0293FC;
-}
-
-.dropdown {
-    font-family: 'Poppins', sans-serif;
-} 
-
-.dropdown-toggle {
-    background-color: #fff;
-    color: #000;
-    max-width: 400px;
-    width: 100%;
-    &:hover {
-        background-color: #fff;
-    }
-}
-
-.library-img {
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp');
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
-
-.library-img img {
-    border:1px solid rgb(88, 188, 151);
-    border-top: 5px solid rgb(88, 188, 151) ;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    cursor: pointer; */
-}
-
-.library-img .first-img {
-    border:1px solid #0293FC;
-    border-top: 5px solid #0293FC;
-}
-
-.library-img .third-img {
-    border:1px solid rgb(88, 188, 151);
-    border-top: 5px solid rgb(88, 188, 151) ;
-}
-
-.library-img .fourth-img {
-    border:1px solid #0293FC;
-    border-top: 5px solid #0293FC;
 }
 
 .library_filter{
     max-width: 1440px;
     width: 100%;
-    /* height: 500px; */
+    height: 100px;
+    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 40px;
+    margin: auto;
 }
+
 .library_filter h1{
     text-align: center!important;
     font-size: 25px;
     text-align: center;
     margin: 10px 0px;
+    color: #0293FC;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
-    background: radial-gradient(#eee, #0293FC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* color: #0293FC; */
 }
 /* Style the select box */
-/* .library_filter-select {
+.library_filter-select {
     padding: 12px 20px;
     font-size: 16px;
     border: 2px solid #0293FC;
@@ -118,17 +46,17 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-} */
+}
 
 /* Style the select options */
-/* .library_filter-select option {
+.library_filter-select option {
     padding: 12px 20px;
     font-size: 16px;
     color: black;
     background-color: white;
     cursor: pointer;
     outline: none;
-} */
+}
 
 /* Remove default arrow in Firefox */
 .library_filter-select::-moz-focus-inner {
@@ -149,10 +77,10 @@
 .library_cards_cover{
     max-width: 1440px;
     width: 100%;
+    border: 1px solid black;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding: 30px 20px;
-    gap: 20px;
-    /* border: 1px solid black; */
+    padding: 10px 0px;
 }

@@ -6,11 +6,11 @@
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-    filter: opacity(1);
-    border: 1px solid #0293FC;
-    /* background-color: #ffffff; */
+    transition: box-shadow 0.3s ease;
+    background-color: #ffffff;
+    filter: opacity(0.8);
 }
 
 /* User Image Container */
@@ -32,26 +32,25 @@
 /* User Info */
 .usercard h2 {
     text-align: center;
-    margin: 12px 0;
+    margin: 5px 0;
     font-size: 1.5rem;
-    color: #fff;
+    color: #333333;
 }
 .usercard p{
     text-indent: 5px;
-    color: #0293FC;
 }
 .usercard p i {
-    color: #fff;
+    color: #0293FC;
     margin-right: 5px;
 }
 
 .usercard p font {
     font-weight: 500;
-    color: #fff;
+    color: #333333;
 }
 
 /* Hover Effect */
 .usercard:hover {
-    filter: opacity(0.8);
-    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    filter: opacity(1);
 }

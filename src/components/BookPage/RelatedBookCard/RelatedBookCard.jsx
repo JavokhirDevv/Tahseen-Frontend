@@ -8,7 +8,7 @@ const RelatedBookCard = () => {
         <img src={img1} alt="" />
       </div>
       <div className="relatedbookcard_text">
-        <h4>"Who will cry when You die"</h4>
+        <h4>Who will cry when You die</h4>
         <h5><font>Muallif:</font> Robin Sharma</h5>
         <h5><font>Janr:</font> Ilmiy</h5>
         <h5><font>Mavjud:</font> 43</h5>

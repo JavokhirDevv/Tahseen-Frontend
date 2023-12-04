@@ -12,11 +12,9 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    /* border: 1px solid black; */
     font-family: "Poppins" sans-serif !important;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
-    background-repeat: no-repeat;
-    background-size: cover;
 
 }
 
@@ -66,8 +64,6 @@
 .related_books h1 {
     font-size: 18px;
     font-weight: 600;
-    margin: 15px 0px;
-    color: #0293FC;
+    margin: 5px 0px;
     font-family: 'Red Hat Display', sans-serif;
-    text-transform: uppercase;
 }

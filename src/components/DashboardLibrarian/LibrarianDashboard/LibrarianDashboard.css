@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 1rem;
+    margin-top: 20px;
 }
 
 
@@ -24,20 +24,19 @@
     font-family: "Poppins", sans-serif;
     padding: 20px;
     box-sizing: border-box;
-    /* background: linear-gradient(to bottom, #000, #161616); */
+    background: #F5F7FA;
     border-radius: 20px;
-    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     margin-left: 10px;
 
 }
 .librarian_dashboard_main_side h1{
     font-size: 30px;
-    color: #0293FC;
+    color: black;
 
 }
 .librarian_dashboard_main_side h5{
     font-weight: 400;
-    font-size: 20px;
 }
 .library_dashboard_libray_page_change{
     max-width: 1300px;
@@ -49,8 +48,8 @@
     width: 100%;
     margin: 20px auto;
     border-radius: 20px;
+    background: white;
     padding: 10px 15px;
     overflow: hidden;
-    color: #000;
-    /* background: white; */
+    border: 1px solid red;
 }

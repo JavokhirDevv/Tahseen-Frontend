@@ -1,15 +1,13 @@
 .audio_book_header {
     max-width: 1440px;
     width: 100%;
+    height: auto;
     margin: auto;
-    padding-top: 1rem;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     font-family: 'Red Hat Display', sans-serif;
-    border-radius: 10px;
-    background: linear-gradient(to bottom, #000, #161616);
-    /* border: 1px solid #fff; */
 
 }
 
@@ -17,8 +15,7 @@
     max-width: 510px;
     width: 100%;
     height: 530px;
-    border: 1px solid #0293FC;
-    border-radius: 10px;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +26,7 @@
     height: 450px;
     border-radius: 20px;    
     object-fit: cover;
-    color: #fff;
+    scale: 0.9;
 }
 
 .audio_book_header_content {
@@ -37,15 +34,14 @@
     width: 100%;
     height: auto;
     margin-top: 30px;
-    padding: 0px 20px;
     /* border: 1px solid black; */
+    padding: 0px 20px;
 }
 
 .audio_book_header_name {
     font-size: 33px;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 400;
-    color: #fff;
 }
 
 .audio_book_header_content span {
@@ -53,23 +49,22 @@
     color: #0293FC;
 }
 
-/* .audio_book_header_content span i {
+.audio_book_header_content span i {
     margin-left: 5px;
-} */
+}
 
 .audio_book_header_content span strong {
     margin-left: 8px;
     font-size: 18px;
-    color: #fff;
+    color: black;
     font-family: 'Red Hat Display', sans-serif;
 
 }
 
 .audio_book_header_icons_cover {
     display: flex;
-    color: #fff;
-    margin-bottom: 15px;
     /* border: 1px solid black; */
+    margin-bottom: 15px;
 }
 
 .audio_book_header_icons_cover h5 {
@@ -85,7 +80,7 @@
 
 .audio_book_header_content p {
     font-size: 13px;
-    color: #fff;
+    color: rgb(60, 60, 60);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-top: 8px;
@@ -93,32 +88,31 @@
 }
 
 .audio_book_header_hr {
-    border: 1px solid #fff;
+    border: 1px solid rgb(120, 120, 120);
 }
 
 .audio_book_header_bottom_side {
     max-width: 800px;
     width: 100%;
     height: 100px;
+    /* border: 1px solid black; */
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #fff; */
 }
 
 .audio_book_header_title_img_name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* border: 1px solid black; */
     max-width: 300px;
     width: 100%;
-    color: #fff;
-    /* border: 1px solid black; */
 }
 
 .audio_book_header_title {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .audio_book_header_title_img_name img {
@@ -132,7 +126,6 @@
 .audio_book_header_title_img_name h6 {
     font-size: 13px;
     font-weight: 400;
-    /* color: #0293FC; */
 }
 
 .audio_book_header_title_img_name h4 {
@@ -148,6 +141,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
+
 }
 
 .audio_book_header_available .fa-circle-check {
@@ -157,26 +151,29 @@
 
 
 .audio_book_save {
-    max-width: 150px;
+    max-width: 100px;
     width: 100%;
     height: 40px;
+    border: 1px solid #0293FC;
     border-radius: 10px;
     text-align: center;
-    background-color: #0293FC;
-    color: #fff;
-    font-family: 'Red Hat Display', sans-serif;
+    transition: all 0.3s;
 }
 
 .audio_book_save:active {
-    scale: 1.05;
+    max-width: 100px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #0293FC;
+    border-radius: 10px;
+    text-align: center;
+    scale: 1.03;
 }
 
 .audio_book_save:hover {
     background: #0293FC;
     color: white;
-    scale: 1.05;
 }
-
 .audio_book_header .content{
     height: 250px;
 }

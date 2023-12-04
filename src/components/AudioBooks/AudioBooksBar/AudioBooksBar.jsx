@@ -6,87 +6,37 @@ const AudioBooksBar = () => {
   const [authors, setAuthors] = useState([]);
   useEffect(() => {
     axios.get(`${api_base_url}api/authors`)
-    .then(a => setAuthors(a.data.data))
-    .catch((error) => console.log(error))
+      .then(a => setAuthors(a.data.data))
+      .catch((error) => console.log(error))
   }, [])
   return (
     <div className="audiobooksbar">
-      {/* <div className="flex items-center justify-center p-5">
-        <div className="rounded-lg bg-gray-200 p-3">
-          <div className="flex">
-            <div className="flex w-20 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-5">
-              <svg
-                viewBox="0 0 20 20"
-                aria-hidden="true"
-                className="pointer-events-none absolute w-5 fill-gray-500 transition"
-              >
-                <path d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z"></path>
-              </svg>
-            </div>
-            <input
-              type="text"
-              className="w-full max-w-[560px] bg-white pl-2 text-base font-semibold outline-0"
-              placeholder=""
-              id=""
-            />
-            <input
-              type="button"
-              value="Search"
-              className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors"
-            />
-          </div>
-        </div>
-      </div> */}
-
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Qidiring" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Qidirish</button>
-      </form>
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search..."
+          id=""
+        />
+        <button
+          type="button"
+          className="search-button"
+        >
+          Search
+        </button>
+      </div>
 
       <div className="audiobooksbar_filter">
-        {/* <select className="audiobooksbar_filter-select">
+        <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Til
           </option>
           <option value="non-fiction">O`zbek</option>
           <option value="non-fiction">Rus</option>
           <option value="non-fiction">Ingliz</option>
-        </select> */}
-        <div class="dropdown">
-          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            Suxandonlar
-          </a>
+        </select>
 
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Javohirbek G'ulomov</a></li>
-          </ul>
-        </div>
-
-        <div class="dropdown">
-          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            Mualliflar
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Muhammadkarim To'xtaboyev</a></li>
-            <li><a class="dropdown-item" href="#">G'ulomov Javohirbek</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-            <li><a class="dropdown-item" href="#">Muhammadkarim To'xtaboyev</a></li>
-            <li><a class="dropdown-item" href="#">G'ulomov Javohirbek</a></li>
-            <li><a class="dropdown-item" href="#">Azizbek Muzaffarov</a></li>
-          </ul>
-        </div>
-
-        {/* <select className="audiobooksbar_filter-select">
+        <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Mualliflar
           </option>
@@ -97,27 +47,15 @@ const AudioBooksBar = () => {
               )
             })
           }
-        </select> */}
+        </select>
 
-        {/* <select className="audiobooksbar_filter-select">
+        <select className="audiobooksbar_filter-select">
           <option value="" disabled selected hidden>
             Suxandonlar
-          </option> */}
+          </option>
           {/* Map */}
           {/* <option value="non-fiction">Arab Tili</option> */}
-        {/* </select> */}
-        <div class="dropdown">
-          <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            Til
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">O'zbek tili</a></li>
-            <li><a class="dropdown-item" href="#">Arab tili</a></li>
-            <li><a class="dropdown-item" href="#">Ingliz tili</a></li>
-            <li><a class="dropdown-item" href="#">Rus tili</a></li>
-          </ul>
-        </div>
+        </select>
       </div>
     </div>
   );

@@ -5,16 +5,14 @@
   border-radius: 8px;
   padding: 20px;
   margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Red Hat Display', sans-serif;
 }
-
 .audiobookcard_image_cover{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
-
 .audiobookcard_image {
   height: 200px; /* Set the height according to your design */
   object-fit: cover; /* Ensure the image covers the container */
@@ -25,12 +23,11 @@
 .audiobookcard_title {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #0293FC;
 }
 
 .audiobookcard_author {
   font-size: 1rem;
-  color: #fff;
+  color: #555;
   margin: 5px 0px;
 }
 
@@ -46,10 +43,10 @@
 
 
 .audiobookcard_bookcard_button{
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* height: 50px; */
   /* border: 1px solid black; */
 }
 .audiobookcard button{
@@ -57,30 +54,41 @@
   width: 100%;
   height: 35px;
   text-align: center;
-  background-color: #0293FC;
+  background-color: white;
+  border: 1px solid #0293FC;
   text-align: center;
-  color: #fff;
+  color: #0293FC;
   border-radius: 10px;
+  transition: all 0.2s;
   font-family: 'Poppins', sans-serif;
 
 }
 
 .audiobookcard button:active{
-  scale: 1.05;
+  max-width: 150px;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #0293FC;
+  text-align: center;
+  color: #0293FC;
+  border-radius: 10px;
+  margin-top: 10px;
+  scale: 0.98;
 }
-
 .audiobookcard button:hover{
-  scale: 1.05;
-
+  background-color: #0293FC;
+  color: white;
 }
-
 .audiobookcard_button_cover{
   max-width: 150px;
   width: 100%;
   text-align: center;
+  background-color: white;
   color: #0293FC;
   border-radius: 10px;
+  transition: all 0.2s;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  scale: 0.98;
 }

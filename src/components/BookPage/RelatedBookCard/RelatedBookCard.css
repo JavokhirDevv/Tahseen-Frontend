@@ -1,49 +1,48 @@
 .relatedbookcard{
     max-width: 370px;
     width: 100%;
-    height: 300px;
+    height: 130px;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    margin: 10px;
+    margin: 3px;
+    box-shadow: 0 10px 20px rgba(133, 133, 133, 0.118);
     border-radius: 10px;
-    /* border: 1px solid #0293FC; */
 }
 .relatedbookcard_img {
     max-width: 125px;
     width: 100%;
-    overflow: hidden;
-    margin-left: 1rem;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     /* border: 1px solid black; */
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .relatedbookcard img{
-    height: 130px;
+    height: 120px;
+
 }
 .relatedbookcard_text{
     max-width: 235px;
     width: 100%;
-    color: #fff;
-   margin-left: 10px;
     /* border: 1px solid black; */
 }
 .relatedbookcard_text font{
-    color: #0293FC;
+    color: #393280;
     font-style: 500;
-    text-decoration: underline;
 }
 .relatedbookcard_text h4{
     font-size: 14px;
 }
 .relatedbookcard_text h5{
-    font-size: 15px;
+    font-size: 11px;
 }
 .relatedbookcard_text span{
-    /* text-align: left; */
+    text-align: left;
     color: #0293FC;
     font-size: 12px;
+    
 }
 .relatedbookcard_text span i{
     margin: 2px;
@@ -54,19 +53,34 @@
     width: 100%;
     height: 20px;
     text-align: center;
-    background-color: #0293FC;
+    background-color: white;
+    border: 1px solid #0293FC;
     text-align: center;
-    color: #fff;
+    color: #0293FC;
     border-radius: 7px;
-    transition: all 0.3s;
+    transition: all 0.2s;
     font-size: 12px;
     margin-left: 10px;
-    font-family: "Poppins" sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 
 }
 .relatedbookcard_text button:active{
+    max-width: 70px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #0293FC;
+    text-align: center;
+    color: #0293FC;
+    border-radius: 7px;
+    transition: all 0.2s;
+    font-size: 12px;
+    margin-left: 10px;
+    font-family: 'Red Hat Display', sans-serif;
     scale: 0.95;
 }
 .relatedbookcard_text button:hover{
-    scale: 0.95;
+    background-color: #0293FC;
+    color: white;
 }

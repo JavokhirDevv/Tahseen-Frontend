@@ -3,7 +3,6 @@ import "./Header.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 import logoTahseen from "../../../assets/imgs/header/logo.JPG"; // Use '.JPG' for the file extension
-import logo from '../../../assets/imgs/header/Tahseen logo png quality high.png'
 import Footer from "../../GeneralComponents/Footer/Footer";
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
       <div className="header">
         <div className="tahseen_logo">
           <NavLink to={"/"}>
-            <img src={logo} alt="" />
+            <img src={logoTahseen} alt="" />
           </NavLink>
         </div>
 

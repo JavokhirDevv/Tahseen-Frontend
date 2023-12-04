@@ -46,7 +46,7 @@
     margin: auto;
     margin-top: 80px;
     height: 1px;
-    background-color: #fff;
+    background-color: #0293FC;
 }
 
 .footer-flex { 
@@ -69,13 +69,8 @@
     margin: 0 20px;
 }
 
-.footer-item a, .footer-tahseen h1 {
-    color: #fff;
-}
-
 .footer-item a:hover {
     color: #0293FC;
-    text-decoration: underline;
 }
 
 

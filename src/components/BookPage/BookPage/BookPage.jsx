@@ -10,30 +10,32 @@ import api_base_url from "../../../configurations/Config";
 
 const BookPage = () => {
   const { id } = useParams();
-  const [books, setBooks] = useState([]); // Initialize books as an empty array
+  const [book, setBook] = useState(null); // Initialize book as null
 
-  const GetAllBooks = async () => {
-    await axios.get(`${api_base_url}api/Books`)
-    .then(response => {
+  const getBookDetails = async () => {
+    try {
+      const response = await axios.get(`${api_base_url}api/Books`);
       const foundBook = response.data.data.find((book) => book.id == id);
       if (foundBook) {
-        setBooks(foundBook); // Wrap the found book in an array
+        setBook(foundBook);
       } else {
         console.log(`Book with ID ${id} not found`);
       }
-    })
-    .catch((error) => {
+    } catch (error) {
       console.log(error);
-    })
-}
-useEffect(() => {
-  GetAllBooks()
-}, [id])
+    }
+  };
+
+  useEffect(() => {
+    getBookDetails();
+  }, [id]);
+
+  console.log(book);
   return (
     <div className="bookpage">
-      <BookPageHeader bookHeader={books} />
+      <BookPageHeader bookHeader={book} />
       <div className="details_and_related_books_cover">
-        {<BookPageDetails bookDetails={books} />} 
+        {<BookPageDetails bookDetails={book} />} 
         <div className="related_books">
           <h1>Muallifga tegishli kitoblar:</h1>
           <div className="relatedbookcards">

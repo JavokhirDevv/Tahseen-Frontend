@@ -1,16 +1,13 @@
 .audio_book_page {
     max-width: 1440px;
     width: 100%;
+    height: auto;
+    border: 1px solid black;
     margin: auto;
     padding: 20px 0px;
 }
 .audio_book_player{
     max-width: 500px;
     width: 100%;
-    margin: 0 auto;
-    text-align: center;   
-    height: 90px;
-    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
-    background-repeat: repeat;
-    background-size: cover;
+    margin: 10px auto;   
 }

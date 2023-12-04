@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination} from 'swiper/modules';
 import './Banner.css'
 // import library from '../../../assets/imgs/banner/library.png'
-import books from '../../../assets/imgs/banner/book_PNG51067.png'
+import books from '../../../assets/imgs/banner/library.png'
 
 const Banner = () => {
   return (

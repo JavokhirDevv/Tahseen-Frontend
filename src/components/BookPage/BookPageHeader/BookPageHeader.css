@@ -3,16 +3,11 @@
     width: 100%;
     height: auto;
     margin: auto;
-    color: #fff;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
+    align-items: flex-start;
     font-family: 'Red Hat Display', sans-serif;
-    background-image: url('/src/assets/imgs/banner/body\ back\ color.avif');
-    background-repeat: repeat;
-    background-size: cover;
-    /* border: 1px solid #fff; */
 
 }
 
@@ -20,17 +15,16 @@
     max-width: 510px;
     width: 100%;
     height: 530px;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* border: 1px solid black; */
 }
 
 .bookpage_header .bookpage_header_img img {
     height: 450px;
-    border-radius: 10px; 
-    border: 1px solid #0293FC;   
+    border-radius: 20px;    
 }
 
 .book_header_content {
@@ -67,8 +61,8 @@
 
 .book_header_icons_cover {
     display: flex;
-    margin-bottom: 15px;
     /* border: 1px solid black; */
+    margin-bottom: 15px;
 }
 
 .book_header_icons_cover h5 {
@@ -82,13 +76,9 @@
     margin-top: 5px;
 }
 
-/* .book_header_content {
-    margin-top: 3rem;
-} */
-
 .book_header_content p {
     font-size: 13px;
-    color: #fff;
+    color: rgb(60, 60, 60);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-top: 8px;
@@ -103,11 +93,11 @@
     max-width: 800px;
     width: 100%;
     height: 100px;
-    /* padding: 0px 20px; */
+    /* border: 1px solid black; */
+    padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .book_header_title_img_name {
@@ -159,21 +149,26 @@
 
 
 .bookpage_save {
-    max-width: 150px;
+    max-width: 100px;
     width: 100%;
     height: 40px;
+    border: 1px solid #0293FC;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s;
-    background-color: #0293FC;
-    font-family: 'Poppins', sans-serif;
 }
 
 .bookpage_save:active {
-    scale: 1.05;
+    max-width: 100px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #0293FC;
+    border-radius: 10px;
+    text-align: center;
+    scale: 1.03;
 }
 
 .bookpage_save:hover {
+    background: #0293FC;
     color: white;
-    scale: 1.05;
 }

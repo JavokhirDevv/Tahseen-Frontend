@@ -57,10 +57,12 @@ const LoginPage = () => {
         });
       }
     };
+
   }, []);
 
 
   const Authenticate = (e) => {
+    localStorage.clear()
     e.preventDefault();
     axios.post(api_base_url + "api/Auth/Authenticate", login)
     .then(res => {
