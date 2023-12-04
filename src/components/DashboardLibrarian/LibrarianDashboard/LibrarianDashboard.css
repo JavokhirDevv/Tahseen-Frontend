@@ -24,7 +24,7 @@
     font-family: "Poppins", sans-serif;
     padding: 20px;
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #000, #161616);
+    /* background: linear-gradient(to bottom, #000, #161616); */
     border-radius: 20px;
     color: #fff;
     margin-left: 10px;

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url('/src/assets/imgs/banner/background-5.webp');
+    /* background-image: url('/src/assets/imgs/banner/background-5.webp'); */
     background-repeat: no-repeat;
     background-size:contain;
     margin-top: 1rem;
@@ -57,7 +57,7 @@
     color: #0293FC;
     font-size: 45px;
     background: linear-gradient(#0293FC, #eee);
-  -webkit-background-clip: text;
+    -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 /* .banner_left_side h1{

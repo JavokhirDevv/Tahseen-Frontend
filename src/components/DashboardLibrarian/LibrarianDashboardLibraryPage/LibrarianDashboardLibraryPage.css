@@ -6,8 +6,8 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    background: linear-gradient(to bottom, #000, #161616);
-    /* background: #F5F7FA; */
+    /* background: linear-gradient(to bottom, #000, #161616); */
+    background: #F5F7FA;
 
 }
 .librarian_dashboard_library_page_statistics_card{
@@ -19,8 +19,6 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 15px;
-    background-color: #000;
-    color: #fff;
     border: 1px solid #0293fc;
 }
 

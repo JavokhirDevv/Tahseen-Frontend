@@ -12,6 +12,7 @@ import LibraryPage from "../components/LibraryPage/LibraryPage/LibraryPage";
 import Authors from "../components/Authors/Authors";
 import AuthorPage from "../components/AuthorPage/AuthorPage";
 import LibrarianDashboard from "../components/DashboardLibrarian/LibrarianDashboard/LibrarianDashboard";
+import PrivateRoute from "../utils/PrivateRoute";
 
 const Root = () => {
   return (
@@ -19,7 +20,11 @@ const Root = () => {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route element={<Header />}>
-          <Route path="/bosh-sahifa" element={<MainPage />} />
+          <Route path="/bosh-sahifa" element={
+            <PrivateRoute>
+              <MainPage />
+            </PrivateRoute>
+          } />
           <Route path="/kitoblar" element={<BooksCover />} />
           <Route path="/kitob/:id" element={<BookPage />} />
           <Route path="/kutubxonalar" element={<Libraries />} />

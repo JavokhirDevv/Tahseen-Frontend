@@ -5,7 +5,7 @@
   padding: 20px;
   border: 1px solid #0293FC;
   border-radius: 20px;
-  background: linear-gradient(to bottom, #000, #161616);
+  /* background: linear-gradient(to bottom, #000, #161616); */
 }
 
 /* .librarian_dashboard_sidebar:hover {
@@ -23,13 +23,11 @@
   list-style: none;
   transition: all 0.3s ease;
   border-radius: 10px;
-  margin-top: 15px;
   border: 1px solid #fff;
   /* Darker blue border */
 }
 
 .librarian_dashboard_sidebar .sidebar_link {
-  color: #fff;
   font-size: 15px;
   display: block;
   font-weight: 500;

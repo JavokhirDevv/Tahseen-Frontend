@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 const LoginPage = () => {
-  const navigate = useNavigate();
   const [registration, setRegistration] = useState({
     FirstName: "",
     LastName: "",
@@ -19,17 +18,16 @@ const LoginPage = () => {
     Password: "",
     VerificationCode: ""
   });
-
+  const navigate = useNavigate();
   const [login, setLogin] = useState({PhoneNumber: "", Password: ""});
   const [timerKey, setTimerKey] = useState(0); // Key to reset the countdown timer
   const [isRegistrationButtonDisabled, setIsRegistrationButtonDisabled] = useState(false);
   const [isSendCodeButtonDisabled, setIsSendCodeButtonDisabled] = useState(false);
-  const [open, setOpen] = useState(false);
   const [otp, setOtp] = useState('');
-
-  console.log(login.Password);
-  console.log(login.Password);
-
+  // const [incomingData, setIncomingData] = useState({});
+  const [open, setOpen] = useState(false);
+  const [logOpen, setLogOpen] = useState(false);
+  
   //Frontend swiper from login to sign up
   useEffect(() => {
     const container = document.getElementById("container");
@@ -61,17 +59,38 @@ const LoginPage = () => {
     };
   }, []);
 
-  const CheckAuth = (e) => {
+
+  const Authenticate = (e) => {
     e.preventDefault();
-    var errorMessage = document.querySelector(".error_message");
-    if (
-      login.LoginEmail !== "hello@gmail.com" &&
-      login.LoginPassword !== "222"
-    ) {
-      navigate("/bosh-sahifa");
-    } else {
-      errorMessage.style.display = "block";
-    }
+    axios.post(api_base_url + "api/Auth/Authenticate", login)
+    .then(res => {
+      setLogOpen(true);
+      const token = res.data.token;
+      toast.success("Muvaqqiyatli kirdingiz!", {
+        position: toast.POSITION.TOP_RIGHT,
+        className: "toast-message",
+        autoClose: 7000,
+      });
+      localStorage.setItem('token', token);
+      axios.get(api_base_url+"api/Librarian/me", {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      }).then(e => {
+        if (e.data.data.roles == "Librarian") {
+          navigate("/kutubxonachi");
+        }
+      })
+
+    })
+    .catch(error => {
+      setLogOpen(true);
+      toast.error("Foydalanuvchi mavjud emas!", {
+        position: toast.POSITION.TOP_RIGHT,
+        className: "toast-message",
+        autoClose: 7000,
+      });
+    })
   };
 
   const validateRegistration = () => {
@@ -336,7 +355,7 @@ const LoginPage = () => {
             <input
               name="PhoneNumber"
               onChange={e => setLogin({...login, PhoneNumber: e.target.value})}
-              type="number"
+              type="string"
               placeholder="Telefon Raqam"
             />
             <input
@@ -347,7 +366,7 @@ const LoginPage = () => {
             />
             <h3 className="error_message">Email yoki parol noto`g`ri</h3>
             <a href="#">Parolni unutdingizmi?</a>
-            <button>Kirish</button>
+            <button onClick={Authenticate}>Kirish</button>
           </form>
         </div>
         {/* Login */}

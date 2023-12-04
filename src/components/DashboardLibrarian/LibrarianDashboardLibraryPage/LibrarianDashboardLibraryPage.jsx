@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./LibrarianDashboardLibraryPage.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import img1 from "../../../assets/imgs/LibraryCard/1.png";
+import { TahseenApiControl } from "../../../utils/Context";
 const LibrarianDashboardLibraryPage = () => {
   const [currentDate, setCurrentDate] = useState("");
+  const [librarianData, setLibrarianData] = useContext(TahseenApiControl);
 
   useEffect(() => {
     const updateDate = () => {

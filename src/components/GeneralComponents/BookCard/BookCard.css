@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 15px;
-    background-color: #000;
+    /* background-color: #000; */
     border-radius: 12px;
     /* margin-bottom: 10px; */
     /* box-shadow: 0px 0px 10px #0293FC(0, 0, 0, 0.1);
@@ -46,7 +46,6 @@
 }
 
 .bookcard .book_card_icons .fa-bookmark{
-    color: #C2C6D1;
     max-width: 35px;
     width: 100%;
     height: 35px;
@@ -70,7 +69,6 @@
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #fff;
     font-size: 14px;
     margin-top: 5px;
     font-family: 'Poppins', sans-serif;
