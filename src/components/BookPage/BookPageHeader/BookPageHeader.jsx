@@ -52,7 +52,7 @@ const BookPageHeader = ({ bookHeader }) => {
 
             <div className="book_header_title">
               <h6>Muallif</h6>
-              <h4>MuhammadYusuf</h4>
+              <h4>{author && author.firstName + " " + author.lastName}</h4>
             </div>
           </div>
 

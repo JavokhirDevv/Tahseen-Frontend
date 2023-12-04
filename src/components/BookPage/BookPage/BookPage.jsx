@@ -10,7 +10,7 @@ import api_base_url from "../../../configurations/Config";
 
 const BookPage = () => {
   const { id } = useParams();
-  const [book, setBook] = useState(null); // Initialize book as null
+  const [book, setBook] = useState({}); // Initialize book as null
 
   const getBookDetails = async () => {
     try {
