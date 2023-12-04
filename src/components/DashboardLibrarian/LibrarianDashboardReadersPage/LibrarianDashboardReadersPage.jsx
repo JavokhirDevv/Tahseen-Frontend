@@ -13,25 +13,38 @@ import { Link } from "react-router-dom";
 const LibrarianDashboardReadersPage = () => {
   const [users, setUsers] = useState([]);
   const [editMode, setEditMode] = useState(null);
-  const [updatingData, setUpdatingData] = useState({});
+  const [updatingData, setUpdatingData] = useState({
+    firstName: '',
+    lastName: '',
+    address: '',
+    dateOfBirth: '',
+    readerImage: null,
+  });
   const [open, setOpen] = useState(false);
   const [selectedUserIdToDelete, setSelectedUserIdToDelete] = useState(null);
+  const token = localStorage.getItem('token')
 
   const handleClickOpen = () => {
     setOpen(true);
   };
+  console.log(updatingData);
 
   const handleClose = () => {
     setOpen(false);
   };
 
   const getAllUsers = async () => {
-    try {
-      const response = await axios.get(`${api_base_url}api/users`);
-      setUsers(response.data.data || []);
-    } catch (error) {
-      console.error("Error fetching users:", error);
-    }
+      await axios.get(`${api_base_url}api/users`, {
+        headers: {
+          "Authorization" : `Bearer ${token}`
+        }
+      })
+      .then(response => {
+        setUsers(response.data.data)
+      })
+      .catch(err => {
+        console.log(err);
+      })
   };
 
   useEffect(() => {

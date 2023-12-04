@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import img1 from "../../../assets/imgs/LibraryCard/1.png";
 import { TahseenApiControl } from "../../../utils/Context";
+import api_base_url from "../../../configurations/Config";
 const LibrarianDashboardLibraryPage = () => {
   const [currentDate, setCurrentDate] = useState("");
   const [librarianData, setLibrarianData] = useContext(TahseenApiControl);
-
   useEffect(() => {
     const updateDate = () => {
       const now = new Date();
@@ -48,11 +48,9 @@ const LibrarianDashboardLibraryPage = () => {
         timeZone: "Asia/Tashkent",
       };
 
-      const formattedDate = `${
-        monthNamesUzbek[now.getMonth()]
-      } ${now.getDate()}, ${now.getFullYear()}, ${
-        weekdayNamesUzbek[now.getDay()]
-      }, ${now.getHours()}:${now.getMinutes()}`;
+      const formattedDate = `${monthNamesUzbek[now.getMonth()]
+        } ${now.getDate()}, ${now.getFullYear()}, ${weekdayNamesUzbek[now.getDay()]
+        }, ${now.getHours()}:${now.getMinutes()}`;
 
       setCurrentDate(formattedDate);
     };
@@ -101,8 +99,17 @@ const LibrarianDashboardLibraryPage = () => {
         </div>
       </div>
       <div className="library_dashboard_libray_image_cover">
-        <img className="library_dashboard_libray_image" src={img1} alt="" />
+        {librarianData.libraryBranch && librarianData.libraryBranch.image ? (
+          <img
+            className="library_dashboard_libray_image"
+            src={`${api_base_url}${librarianData.libraryBranch.image}`}
+            alt="Library Branch"
+          />
+        ) : (
+          <p>No image available</p>
+        )}
       </div>
+
     </div>
   );
 };

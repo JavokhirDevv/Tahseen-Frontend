@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './LibrarianDashboardAddReader.css';
 import { InputAdornment, TextField, Button, DialogContent, DialogContentText, DialogTitle, Dialog, DialogActions } from '@mui/material';
 import axios from 'axios';
 import api_base_url from '../../../configurations/Config';
+import { TahseenApiControl } from '../../../utils/Context';
 
 const LibrarianDashboardAddReader = () => {
     const [newReader, setNewReader] = useState({
@@ -14,12 +15,13 @@ const LibrarianDashboardAddReader = () => {
         Address: '',
         DateOfBirth: '',
         ReaderImage: null, // Initialize as null
-        LibraryBranchId: '',
     });
+    const [librarianData, setLibrarianData] = useContext(TahseenApiControl);
+    console.log(librarianData.libraryBranchId);
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
-        if (newReader.DateOfBirth == '') 
+        if (newReader.DateOfBirth === '') 
         {
             console.log('All fields must be filled');
         }
@@ -47,7 +49,7 @@ const LibrarianDashboardAddReader = () => {
         formData.append('PhoneNumber', newReader.PhoneNumber);
         formData.append('Address', newReader.Address);
         formData.append('DateOfBirth', newReader.DateOfBirth);
-        formData.append('LibraryBranchId', newReader.LibraryBranchId);
+        formData.append('LibraryBranchId', librarianData.libraryBranchId);
         setOpen(false);
 
         // Append the file if it exists
@@ -69,6 +71,7 @@ const LibrarianDashboardAddReader = () => {
         }
 
     }
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -83,7 +86,7 @@ const LibrarianDashboardAddReader = () => {
                 <TextField required onChange={e => setNewReader({ ...newReader, LastName: e.target.value })} className='librarian_dashboard_add_reader_input' id="outlined-basic" label="Familiyasi" type='text' variant="outlined" />
                 <TextField required onChange={e => setNewReader({ ...newReader, Email: e.target.value })} className='librarian_dashboard_add_reader_input' id="outlined-basic" label="Email" type='email' variant="outlined" />
                 <TextField required onChange={e => setNewReader({ ...newReader, Password: e.target.value })} className='librarian_dashboard_add_reader_input' id="outlined-basic" label="Parol" type='password' variant="outlined" />
-                <TextField required onChange={e => setNewReader({ ...newReader, LibraryBranchId: e.target.value })} className='librarian_dashboard_add_reader_input' id="outlined-basic" label="LibraryBranchId" type='number' variant="outlined" />
+                {/* <TextField required onChange={e => setNewReader({ ...newReader, LibraryBranchId: e.target.value })} className='librarian_dashboard_add_reader_input' id="outlined-basic" label="LibraryBranchId" type='number' variant="outlined" /> */}
                 <TextField required onChange={e => setNewReader({ ...newReader, PhoneNumber: e.target.value })} className='librarian_dashboard_add_reader_input'
                     label="Telefon raqami"
                     id="outlined-start-adornment"
